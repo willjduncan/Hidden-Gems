@@ -58,11 +58,12 @@ Gem.init(
         allowNull: false,
     },
     visitors: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
+    //FIX PIC
     pic: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     activity_type: {
