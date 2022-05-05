@@ -1,7 +1,7 @@
 //We can call this function from our frontend to log out of the current session
 function logout() {
   fetch("/api/user/logout", {
-    method: "post",
+    method: "delete",
     headers: { "Content-Type": "application/json" }
   })
     .then(function () {
