@@ -3,6 +3,7 @@
     --secondary: #88498F; 
     --tertiary: #E0CBA8;
     --fourth: #104547;
+    --fifth: #030027;
     --light: #ffffff;
     --dark: #272f32;
 }
@@ -16,6 +17,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
+    font-family:  Tahoma, sans-serif;
     scroll-behavior: smooth;
     background-color: var(--light);
     color: var(--tertiary);
@@ -32,16 +34,93 @@ header {
 }
 
 nav ul li a {
-    font-size: 1.8em;
+    font-size: 2em;
     color: var(--tertiary);
 }
   
 header h1 a {
-    font-size: 2 em;
+    font-size: 2.2em;
     color: var(--tertiary);
-    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* MAIN */
+.intro {
+    background-image: url("../images/home-globetrotter.jpg");
+    background-size: cover;
+    /* background-position: 80%; */
+    background-attachment: fixed;
+    height: 600px;
+    z-index: 9999;
+}
+.home-text {
+    font-size: larger;
+    font-weight: bold;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 30px;
+}
+.home-title {
+    width: 40%;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 20px; 
+}
+#top-gem-title {
+    font-size: 2.3em;
+    text-shadow: 1px 1px 1px var(--tertiary);
+    width:45%;
+    margin-left: 10px;
+    border-bottom: 2px solid var(--tertiary);
+
+}
+
+/* CARDS */
+.card:hover {
+    box-shadow: 3px 3px 3px var(--tertiary);
+    background-color: var(--primary);
+}
+.card-style {
+    background-color: rgb(119, 159, 161, .5);
+}
+.card {
+    color: var(--fifth);
+    -webkit-transition: all .6s;
+    -moz-transition:    all .6s;
+    -ms-transition:     all .6s;
+    -o-transition:      all .6s;
+    border: 1px solid #ccc;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+
+}
+.title a {
+    color: var(--fifth); 
+}
+
+
+/* LOGIN PAGE */
+.login-border {
+    border: 2px solid var(--primary);
+    background-color: rgb(224, 203, 168, .7);
+    color: var(--fifth);
+    border-radius: 25px;
+    justify-content: space-between;
+
+}
+#login-body{
+    background-image: url("../images/login-img.jpg");
+    background-size: cover;
+    background-position: 80%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-width: 100%;
+    z-index: 9999;
+}
+.login-header {
+    font-weight: 400;
+    font-size: 2em;
+}
 
 /* BUTTONS */
 a {
@@ -55,6 +134,46 @@ a {
 
 a:hover, #logout:hover {
     color: var(--secondary);
+}
+button {
+    background-color: var(--secondary);
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+button:hover {
+    background-color: var(--primary);
+}
+  
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+  
+.btn-no-style:hover {
+    background: none;
+    color: #3486eb;
+}
+  
+.delete-post-btn {
+    background-color: #d41414;
+}
+  
+.delete-post-btn:hover {
+    background-color: #ff643d;
 }
 
 
@@ -74,11 +193,26 @@ footer a {
 
 
 /* UTILITY CLASSES */
+/* text shadows */
 .ts-1 {
     text-shadow: 1.5px 1.5px 1.5px var(--fourth);
 }
+.ts-2 {
+    text-shadow: 1.5px 1.5px 1.5px var(--tertiary);
+}
+/* colors */
 .bg-pri {
     background-color: var(--primary)  
+}
+.c-sec {
+    color: var(--secondary);
+}
+.c-five {
+    color: var(--fifth);
+}
+/* fonts */
+.bold {
+    font-weight: bold;
 }
 
 
@@ -88,20 +222,7 @@ footer a {
     color: #333;  
   
   
-button {
-    background-color: #225ca3;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-}
-  
-button:hover {
-    background-color: #3486eb;
-}
+
   
 .post-list {
     margin: 0;
@@ -146,32 +267,6 @@ form label {
 main {
     flex: 1;
     padding: 2% 4%;
-}
-  
-.btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-}
-  
-.btn-no-style:hover {
-    background: none;
-    color: #3486eb;
-}
-  
-.delete-post-btn {
-    background-color: #d41414;
-}
-  
-.delete-post-btn:hover {
-    background-color: #ff643d;
 }
   
 .post {
@@ -252,7 +347,3 @@ main {
     margin: 0 auto 10px auto;
     width: 40%;
 }
-
-.login-header {
-    text-align: center;
-} */
