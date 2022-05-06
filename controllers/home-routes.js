@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { User } = require("../models/");
+const { home } = require("../models/");
 
 // homepage
-router.get("/", (req, res) => {
+router.get("/api/home", (req, res) => {
   res.render("home");
 });
 
