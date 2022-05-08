@@ -1,18 +1,27 @@
+const { User } = require("../../models");
+
 const router = require("express").Router();
 
-router.get("/gem", (req,res) => {
+router.get("/Gem", (req,res) => {
+  User.findAll()
+  .then(dbUserDATA => res.json(dbUserData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 
 });
 
-router.get("gem/:id", (req,res) => {
+router.get("/:id", (req,res) => {
+  User.findOne({
+    where: {
+      id: body.gem_id
+    }
+  })
 
 });
 
-router.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, '../api/index.js'));
-  }); 
-
-router.delete('/gem/:gem_', (req, res) => {
+router.delete('/gem/:body.gem_id', (req, res) => {
     const id = req.params.id
     res.json({ id: id })
 })
