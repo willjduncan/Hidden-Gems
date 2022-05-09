@@ -6,6 +6,21 @@ router.get("/", (req, res) => {
   res.render("home");
 });
 
+//Single-Gem Page
+router.get("/gem/:id", (req, res) => {
+  res.render("single-gem");
+});
+
+//Dashboard Page
+router.get("/dashboard", (req, res) => {
+  res.render("dashboard");
+});
+
+//Edit-Gem Page
+router.get("/edit/:id", (req, res) => {
+  res.render("edit-gem");
+});
+
 
 //Redirection away from Login for those Logged In
 router.get('/login', (req, res) => {

@@ -1,0 +1,82 @@
+{{!-- These allow the functionality of the country dropdown menu --}}
+<link rel="stylesheet" href="//unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="//unpkg.com/bootstrap-select@1.12.4/dist/css/bootstrap-select.min.css" type="text/css" />
+<link rel="stylesheet" href="//unpkg.com/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css" type="text/css" /><!-- Button trigger modal -->
+<section id="edit-bg">
+
+<p class="c-tert font-weight-bold">ADD GEM ICONS TO BUTTONS</p>
+    <div id="edit-form" class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="edit-gem-title">Make your edits and updates here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+                <label for="edit-gem-title">*Title</label>
+                <input type="text" id="edit-gem-title" name="edit-gem-title" value="{{gem.title}}" />
+            </div>
+            <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
+            <div class="form-group">
+                <label for="edit-gem-desc">*Description</label>
+                <textarea class="form-control" id="edit-gem-desc" rows="10" value="{{gem.description}}"></textarea>
+            </div>
+            <div class="form-group mb-2">
+                <label for="edit-gem-country">*Country</label>
+                <select class="selectpicker countrypicker" id="edit-gem-country" data-default="US" data-live-search="true"></select>
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-state">*State/Province</label>
+                <input id="edit-gem-state" name="edit-gem-state" value="{{gem.state}}" />
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-city">City</label>
+                <input type="text" id="edit-gem-city" name="edit-gem-city" value="{{gem.city}}" />
+            </div>
+            <p class="font-italic">Please use decimal degrees for coordinates (i.e. 15.23456, -30.67890)</p>
+            <div class="form-group">
+                <label for="edit-gem-lat">Latitude</label>
+                <input id="edit-gem-lat" name="edit-gem-lat" value="{{gem.lat}}" />
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-lon">Longitude</label>
+                <input type="text" id="edit-gem-lon" name="edit-gem-lon" value="{{gem.lon}}" />
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-visit">*Annual Number of Visitors</label>
+                <input id="edit-gem-visit" name="edit-gem-visit" value="{{gem.visitors}}" />
+            </div>
+                <div class="form-group">
+                <label for="edit-gem-activity">*Activity Type</label>
+                <select class="form-control" id="edit-gem-activity">
+                    <option class="disabled">Choose One</option>
+                    <option>Outdoors</option>
+                    <option>Museum</option>
+                    <option>Restaurant</option>
+                    <option>Entertainment</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-photo">*Upload Photograph</label>
+                <input type="file" class="form-control-file" id="edit-gem-photo">
+            </div>
+            </div>
+            <div class="modal-footer">
+                <p class="mr-4">Please fill out all required (*) fields</p>
+            <a id="go-back-btn" class="btn btn-secondary" href="/dashboard">Go Back</a>
+            <button type="button" class="btn btn-primary">Confirm Edit</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="//unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="//unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="//unpkg.com/bootstrap-select@1.12.4/dist/js/bootstrap-select.min.js"></script>
+<script src="//unpkg.com/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script>
+<script>
+    $('.countrypicker').countrypicker();
+</script>

@@ -1,3 +1,31 @@
-<div>
-  Project 2
+<div class ="pt-5 mb-5 intro">
+  <h2 class="bold pt-2 pl-3 ts-2 text-right c-sec mb-3 home-title">Discover a new favorite destination away from the crowds.</h2>
+  <p class="c-five text-right home-text">Find and share underapprecited and unknown wonders from across the world. All gems have less than 100,000 visitors per year. Search and find one that suits your level of adventure.</p>
 </div>
+
+
+
+<div class ="c-sec">
+  <h2 id="top-gem-title" class="bold pt-2 pl-3 ts-2 text-center">Top Rated Places</h2>
+</div>
+
+{{!-- <ol class="gem-list">
+  {{#each gems as |gem|}}
+  <li>
+    {{> gem-card gem }}
+    {{> gem-card }}
+  </li>
+  {{/each}}
+</ol> --}}
+
+<div class="gem-list row">
+  {{!-- {{#each gems as |gem|}} --}}
+  <div class="col-sm-12 col-med-6 col-lg-4 p-4">
+    {{!-- {{> gem-card gem }} --}}
+    {{> gem-card }}
+  </div>
+  {{!-- {{/each}} --}}
+</div>
+
+
+{{!-- ADD DESCRIPTION OF SITE AND MAYBE A COOL SCROLLING EFFECT --}}

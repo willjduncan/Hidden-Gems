@@ -22,7 +22,9 @@
 
 <!-- ADD USER STORY -->
 
-<!-- ADD PROJECT OVERVIEW -->
+<!-- ADD PROJECT OVERVIEW
+
+Hidden Gems is a site where users can create an account and post different great places to tour or visit on vacation. Users will add a name of the site, location, city, state, country, visitorship, pictures, and a description. Users can also like and favorite different sites. The homepage, when logged in, will have all the user's favorited locations. When not logged in, the page will show the top liked spots. Users can also comment and search for location according to activity, type, and location. All locations must have less than 100,000 visitors per year. The homepage will just give a name and a picture. When the user clicks on the card, it will take the user to that location's page where all the info and comments are. There will also be a page for the user's own posts, a dashboard where they can change profile information, and different urls according to the search. For example, search by a state would give all the state's hidden gems.  -->
 
 Once complete, the program should operate so that:
 
@@ -62,7 +64,7 @@ Screenshots of the ............... files are below:
 
 ## Credits
 
-The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. 
+The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. 
 
 <!-- OTHER CREDITS -->
 

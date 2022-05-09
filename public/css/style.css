@@ -260,14 +260,44 @@ button:hover {
 }
 #add-gem-btn {
     /* border: none; */
-    color: var(--tertiary);
-
+    background-color: var(--primary);
+    color: var(--fifth);
+    margin-left: 5%;
+    margin-top: 5%;
 }
 
 
 /* ADD GEM MODAL */
-#add-gem-title {
+#add-gem-title, #edit-gem-title {
     font-size: 1.5em;
+    color: var(--secondary);
+}
+#add-gem-modal {
+    max-width: none;
+    width: 100%;
+}
+
+/* EDIT GEM */
+#edit-form {
+    margin-bottom: 0%;
+}
+#edit-form {
+    max-width: none;
+    width: 67%;
+}
+#edit-bg {
+    background-image: url("../images/edit-gem-mountain.jpg");
+    background-size: cover;
+    background-position: 80%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-width: 100%;
+    z-index: 9999;
+}
+#go-back-btn:hover {
+    /* color: var(--tertiary); */
+    background-color: var(--primary);
 }
 
 
@@ -279,10 +309,6 @@ footer {
     color: var(--tertiary); 
     text-decoration: none;
 }
-
-
-
-
 
 
 /* UTILITY CLASSES */
@@ -317,8 +343,7 @@ footer {
 
 
 /*
-Make bootstrap-select work with bootstrap 4 see:
-https://github.com/silviomoreto/bootstrap-select/issues/1135
+Make bootstrap-select work with bootstrap 4 
 */
 .dropdown-toggle.btn-default {
     color: #292b2c;
