@@ -2,7 +2,7 @@ const { Comment } = require('../models');
 
 const commentData = [
   {
-    comment_text: "Odapv oca pcoaiu apclict.",
+    comment_text: "Loving the view and climb",
     user_id: 5,
     post_id: 1
   },
@@ -22,7 +22,7 @@ const commentData = [
     post_id: 4
   },
   {
-    comment_text: "Vopceci lorem aicacty welopca dsaopli, qwetien colpstiscal.",
+    comment_text: "Can't wait to visit the lighthouse and kayak in the calming waters!",
     user_id: 4,
     post_id: 2
   },
