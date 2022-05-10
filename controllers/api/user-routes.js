@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 //POST /api/user/
-router.post('/', (req, res) => {
+router.post('/api/user', (req, res) => {
   User.create({
     username: req.body.username,
     password: req.body.password

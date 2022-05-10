@@ -5,6 +5,6 @@ const { Post, User, Comment } = require('../models');
 module.exports = router;
 
 
-router.get('/', (req, res) => {
+router.get('/api/dashboard', (req, res) => {
     res.render('dashboard', { loggedIn: true });
   });
