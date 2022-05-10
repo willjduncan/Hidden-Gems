@@ -1,6 +1,6 @@
-const { Post } = require('../models');
+const { Gem } = require('../models');
 
-const postData = [
+const gemData = [
   {
     title: "Pilot Mountain State Park",
     description: "Tall Mountain",
@@ -10,8 +10,6 @@ const postData = [
     pic: "",
     activity_type: "Fishing, Climbing, and Kayaking",
     city: "Pinnacle",
-    lon: "080-28'44'' W",
-    lat: "36-20'25'' N",
     user_id: 3
   },
   {
@@ -23,8 +21,6 @@ const postData = [
     pic: "",
     activity_type: "Camping, Fishing, Kayaking, and Tours",
     city: "Houghton",
-    lon: "47.9959° N",
-    lat: "88.9093° W",
     user_id: 5
   },
   {
@@ -36,8 +32,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 1
   },
   {
@@ -49,8 +43,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 4
   },
   {
@@ -62,8 +54,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 2
   },
   {
@@ -75,8 +65,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 4
   },
   {
@@ -88,8 +76,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 1
   },
   {
@@ -101,8 +87,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 3
   },
   {
@@ -114,8 +98,6 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 5
   },
   {
@@ -127,12 +109,10 @@ const postData = [
     pic: "",
     activity_type: "",
     city: "",
-    lon: "",
-    lat: "",
     user_id: 2
   }
 ];
 
-const seedPosts = () => Post.bulkCreate(postData);
+const seedPosts = () => Gem.bulkCreate(gemData);
 
 module.exports = seedPosts;

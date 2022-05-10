@@ -1,7 +1,7 @@
 // Dependencies
 const seedUsers = require("./user-seeds");
-const seedPosts = require("./post-seeds");
-const seedComments = require("./comments-seeds");
+const seedPosts = require("./gem-seeds");
+const seedComments = require("./comment-seeds");
 const seedVotes = require("./vote-seeds");
 
 const sequelize = require("../config/config");

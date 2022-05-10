@@ -1,6 +1,6 @@
 // Dependencies
-const sequelize = require("../config/config");
-const { User, Post} = require("../models");
+const sequelize = require("../config/config.js");
+const { User, Gem} = require("../models");
 
 const userData = [
     {
