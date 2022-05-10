@@ -21,6 +21,11 @@ router.get("/edit/:id", (req, res) => {
   res.render("edit-gem");
 });
 
+//Edit-Profile Page
+router.get("/edit/user/:id", (req, res) => {
+  res.render("edit-profile");
+});
+
 
 //Redirection away from Login for those Logged In
 router.get('/login', (req, res) => {

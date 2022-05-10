@@ -5,20 +5,23 @@
 
 
 <button type="button" id="add-gem-btn" class="edit-link" data-toggle="modal" data-target="#add-gem-modal">
-  Create New Gem
+  Create New Gem <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt="">
 </button>
+<a id="edit-prof-btn" class="edit-link" data-toggle="modal" href="edit/user/:id"> 
+Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt="">
+</a>
 
 <!-- Add Gem Modal -->
 <div class="modal fade " id="add-gem-modal" tabindex="-1" role="dialog" aria-labelledby="add-gem-title" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="add-gem-title">New Gem</h5>
+        <h5 class="modal-title pl-5" id="add-gem-title">New Gem</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body pl-5">
           <p class="font-italic">Name a great place that isn't well-known</p>
         <div class="form-group">
             <label for="gem-title">*Title</label>
@@ -92,7 +95,7 @@
     <div class="col-sm-12 col-med-6 col-lg-4 p-4 ml-3">
         {{!-- {{> gem-card gem }} --}}
         {{> gem-card }}
-            <a id="a-dash" href="/edit/id" class="edit-link">Edit post</a>
+            <a id="a-dash" href="/edit/id" class="edit-link">Edit post <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt=""></a>
              {{!-- <a id="a-dash" href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
     </div>
     {{!-- {{/each}} --}}

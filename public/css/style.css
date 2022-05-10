@@ -59,13 +59,15 @@ header h1 a {
     font-weight: bold;
     width: 40%;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 8%;
+    line-height: 2;
 }
 .home-title {
     width: 40%;
     margin-left: auto;
-    margin-right: 30px;
-    margin-bottom: 20px; 
+    line-height: 1.8;
+    margin-right: 8%;
+    padding-bottom: 2%; 
 }
 #top-gem-title {
     font-size: 2.3em;
@@ -153,9 +155,14 @@ header h1 a {
 
 }
 .desc-text {
-    width: 90%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 7%;
+    line-height: 2;
     /* text-align: center; */
+}
+#desc-title {
+    margin-left: 7%;
+    margin-bottom: 2%;
 }
       
 @keyframes slidein {
@@ -187,15 +194,19 @@ header h1 a {
     padding: 1%;
     margin-bottom: 1%;
 }
-  
+
 .comment:nth-child(odd) {
     background-color: #fff5eb;
 }
-  
+
 .comment .meta .comment-header {
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
+}
+.meta, .text{
+    margin-left: 7%;
+    margin-bottom: 1%;
 }
 .comment-btn, .upvote-btn {
     border-radius: 10px;
@@ -238,10 +249,16 @@ button {
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
-}
-  
+} 
 button:hover {
     background-color: var(--primary);
+}
+
+.icon-btn {
+    visibility: hidden;
+}
+.edit-link:hover .icon-btn {
+    visibility: visible;
 }
 
 
@@ -258,12 +275,16 @@ button:hover {
     background-color: var(--tertiary);
     font-weight: 500;
 }
-#add-gem-btn {
-    /* border: none; */
+#add-gem-btn, #edit-prof-btn {
+    box-shadow: 3px 3px 3px var(--fourth);
+    font-size: larger;
     background-color: var(--primary);
     color: var(--fifth);
     margin-left: 5%;
     margin-top: 5%;
+}
+#edit-prof-btn:hover {
+    background-color: var(--tertiary);
 }
 
 
@@ -395,3 +416,21 @@ Make bootstrap-select work with bootstrap 4
   .bootstrap-select.btn-group .dropdown-toggle .filter-option {
     display: inline !important;
   }
+
+
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen  and (max-width: 575px) {
+
+}
