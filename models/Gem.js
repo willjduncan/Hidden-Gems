@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/config.js');
 
 // create our Gem model
 class Gem extends Model {
@@ -58,11 +58,11 @@ Gem.init(
         allowNull: false,
     },
     visitors: {
-        type: DataTypes.INT,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     pic: {
-        type: DataTypes.VARCHAR,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     activity_type: {
