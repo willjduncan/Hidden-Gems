@@ -3,6 +3,7 @@ const Gem = require("./Gem");
 const Vote = require('./Vote');
 const Favorite = require('./Favorite');
 const Comment = require('./Comment');
+const sequelize = require('../config/config');
 
 
 //USER - GEM ASSOCIATIONS
@@ -21,7 +22,7 @@ User.belongsToMany(Gem, {
   as: 'voted_gems',
   foreignKey: 'user_id'
 });
-  
+
 Gem.belongsToMany(User, {
   through: Vote,
   as: 'voted_gems',
@@ -31,15 +32,15 @@ Gem.belongsToMany(User, {
 Vote.belongsTo(User, {
   foreignKey: 'user_id'
 });
-  
+
 Vote.belongsTo(Gem, {
   foreignKey: 'gem_id'
 });
-  
+
 User.hasMany(Vote, {
-    foreignKey: 'user_id'
+  foreignKey: 'user_id'
 });
-  
+
 Gem.hasMany(Vote, {
   foreignKey: 'gem_id'
 });
@@ -51,7 +52,7 @@ User.belongsToMany(Gem, {
   as: 'favorite_gems',
   foreignKey: 'user_id'
 });
-  
+
 Gem.belongsToMany(User, {
   through: Favorite,
   as: 'favorite_gems',
@@ -61,15 +62,15 @@ Gem.belongsToMany(User, {
 Favorite.belongsTo(User, {
   foreignKey: 'user_id'
 });
-  
+
 Favorite.belongsTo(Gem, {
   foreignKey: 'gem_id'
 });
-  
+
 User.hasMany(Favorite, {
   foreignKey: 'user_id'
 });
-  
+
 Gem.hasMany(Favorite, {
   foreignKey: 'gem_id'
 });
@@ -79,15 +80,15 @@ Gem.hasMany(Favorite, {
 Comment.belongsTo(User, {
   foreignKey: 'user_id'
 });
-  
+
 Comment.belongsTo(Gem, {
   foreignKey: 'gem_id'
 });
-  
+
 User.hasMany(Comment, {
   foreignKey: 'user_id'
 });
-  
+
 Gem.hasMany(Comment, {
   foreignKey: 'gem_id'
 });

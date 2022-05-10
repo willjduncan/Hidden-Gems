@@ -1,6 +1,6 @@
 const router = require("express").Router();
-
 const { Post, User, Vote, Comment } = require("../../models");
+
 
 Post.findAll({
  order: [['created_at', 'DESC']],

@@ -1,10 +1,9 @@
-const {User, Gem } = require("../../models");
+const router = require('express').Router();
+const { Gem } = require('../../models');
 
-const router = require("express").Router();//object 
-const sequelize = require('../../config/config');
 
 router.get("/", (req, res) => {
-  User.findAll()
+  Gem.findAll()
     .then(dbUserDATA => res.json(dbUserData))
     .catch(err => {
       console.log(err);

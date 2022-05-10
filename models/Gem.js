@@ -3,83 +3,83 @@ const sequelize = require('../config/config');
 
 // create our Gem model
 class Gem extends Model {
-    static upvote(body, models) {
-      return models.Vote.create({
-        user_id: body.user_id,
-        gem_id: body.gem_id
-      }).then(() => {
-        return Gem.findOne({
-          where: {
-            id: body.gem_id
-          },
-          attributes: [
-            'id',
-            'title',
-            'created_at',
-            [
-              sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'),
-              'vote_count'
-            ]
+  static upvote(body, models) {
+    return models.Vote.create({
+      user_id: body.user_id,
+      gem_id: body.gem_id
+    }).then(() => {
+      return Gem.findOne({
+        where: {
+          id: body.gem_id
+        },
+        attributes: [
+          'id',
+          'title',
+          'created_at',
+          [
+            sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'),
+            'vote_count'
           ]
-        });
+        ]
       });
-    }
+    });
+  }
 }
 
 Gem.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     description: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     country: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     state: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     visitors: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     pic: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     activity_type: {
-        type: DataTypes.STRING(50),
-        allowNull: false,
-    },   
+      type: DataTypes.STRING(50),
+      allowNull: false,
+    },
     city: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     lon: {
       type: DataTypes.DOUBLE,
       allowNull: true,
     },
     lat: {
-        type: DataTypes.DOUBLE,
-        allowNull: true,
+      type: DataTypes.DOUBLE,
+      allowNull: true,
     }
   },
   {
