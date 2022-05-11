@@ -1,6 +1,6 @@
 //We can call this function from our frontend to log out of the current session
  async function logout() {
-  const response = await fetch("/api/users/logout", {
+  const response = await fetch("/api/user/logout", {
     method: "post",
     headers: { "Content-Type": "application/json" }
   })

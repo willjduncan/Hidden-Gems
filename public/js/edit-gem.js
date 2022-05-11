@@ -2,16 +2,25 @@ async function editFormHandler(event) {
     event.preventDefault();
 
     const title = document.querySelector("input[name='gem-title']").value.trim();
-    const id = window.location.toString().split("/") [
+    const id = window.location.toString().split("/")[
         window.location.toString().split("/").length - 1
     ];
 
     const response = await fetch(`api/gem/${id}`, {
         method: "PUT",
         body: JSON.stringify({
-            title
+            title,
+            description,
+            country,
+            state,
+            visitors,
+            pic,
+            activity_type,
+            city,
+            lon,
+            lat
         }),
-        headers: { "Content-Type": "application/json"}
+        headers: { "Content-Type": "application/json" }
     });
 
     if (response.ok) {
