@@ -81,29 +81,25 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
   </div>
 </div>
 
+{{!-- Previously made gems --}}
+{{#if gems.length}}
 <section>
-
-{{!-- {{#if gems.length}} --}}
-<section>
-
-<div class ="c-sec">
-  <h2 id="top-gem-title" class="bold pt-2 pl-3 ts-2 text-center">Your Gems</h2>
-</div>
-
-    <div class="gem-list row">
-    {{!-- {{#each gems as |gem|}} --}}
+  <div class ="c-sec">
+    <h2 id="top-gem-title" class="bold pt-2 pl-3 ts-2 text-center">Your Gems</h2>
+  </div>
+  <div class="gem-list row">
+    {{#each gems as |gem|}}
     <div class="col-sm-12 col-med-6 col-lg-4 p-4 ml-3">
-        {{!-- {{> gem-card gem }} --}}
+        {{> gem-card gem }}
         {{> gem-card }}
-            <a id="a-dash" href="/edit/id" class="edit-link">Edit post <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt=""></a>
-             {{!-- <a id="a-dash" href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+            <a id="a-dash" href="/edit/{{post.id}}" class="edit-link">Edit post <img src="/images/icon.png" class="icon-btn" width="17" height="17"></a>
     </div>
-    {{!-- {{/each}} --}}
-    </div>
-
+    {{/each}}
+  </div>
 </section>
-{{!-- {{/if}} --}}
-{{!-- <script src="/javascript/add-gem.js"></script> --}}
+{{/if}}
+
+<script src="/javascript/add-gem.js"></script>
 <script src="//unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="//unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="//unpkg.com/bootstrap-select@1.12.4/dist/js/bootstrap-select.min.js"></script>
