@@ -145,6 +145,9 @@ header h1 a {
     margin-left: 15px;
     font-size: 3em;
 }
+.info-box {
+    justify-content: space-around;
+}
 .info-border {
     border: 2px solid var(--tertiary);
     border-radius: 7px;
@@ -162,7 +165,6 @@ header h1 a {
     width: 85%;
     margin-left: 7%;
     line-height: 2;
-    /* text-align: center; */
 }
 #desc-title {
     margin-left: 7%;
@@ -320,6 +322,7 @@ button:hover {
     min-width: 100%;
     z-index: 9999;
 }
+
 #go-back-btn:hover {
     /* color: var(--tertiary); */
     background-color: var(--primary);
@@ -437,25 +440,53 @@ Make bootstrap-select work with bootstrap 4
         font-size: 1.5em;
         line-height: 3;
     }
-    #go-back-btn, #delete-gem-btn, #confirm-edit-btn {
+    #go-back-btn, #delete-gem-btn, #confirm-edit-btn, .modal-footer button, #confirm-prof-edit {
         margin: 15px;
         padding: 12px 25px;
         font-size: 2em;
+    }
+    .modal-footer button {
+        margin: 15px;
+        padding: 12px 25px;
+        font-size: 2em; 
+    }
+    .info-border {
+        width: 80%;
+    }
+    .info-box {
+        justify-content: center;
+        margin-right: auto!important;
+        margin-left: auto!important;
+        width: 80%;
     }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-    .intro {
-        /* background-image: none; */
-        /* background-color: var(--tertiary ); */
-        /* opacity: .6; */
-        
-    }
     .home-text, .home-title {
         width: 50%;
         margin-right: auto;
         margin-left: 6%;
+    }
+    .modal-footer {
+        display: block;
+    }
+    .comment-form div {
+        flex-direction: column;
+    }
+    .comment-form div div input {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    .comment-form div div input {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+    .comment-form div div button {
+        margin-bottom: 20px;
+    }
+    .gem-title {
+
     }
 
 }
@@ -495,6 +526,9 @@ Make bootstrap-select work with bootstrap 4
     }
     .nav-item a {
         padding: 5px;
+    }
+    #mask-arrange{
+        top: 45%;
     }
 
 }

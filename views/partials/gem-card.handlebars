@@ -1,19 +1,15 @@
 <card class="card">
     <div class="card-img-top">
-        <img class="img-fluid" src="/images/cascades.png" alt="North Cascades National Park">
+        <img class="img-fluid" src="{{pic}}" alt="">
     </div>
     <div class="card-body card-style">
         <div class="title">
-            <a href="/gem/:id">North Cascades National Park</a>
-        {{!-- <a href="{{post_url}}" target="_blank">{{title}}</a> --}}
+            <a href="/gem/{{id}}">{{title}}</a>
         </div>
-        <div class="">
-            2 Votes
-            {{!-- {{vote_count}} {{format_plural "point" vote_count}} --}}
+        <div>
+            {{vote_count}} {{format_plural "point" vote_count}}
             |
-            1 Comment
-            {{!-- <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
+            <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
         </div>
     </div>
 </card>
-        {{!-- <span>({{format_url post_url}})</span> --}}
