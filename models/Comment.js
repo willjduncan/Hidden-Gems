@@ -12,7 +12,7 @@ Comment.init(
             autoIncrement: true
         },
         comment_text: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [4]
@@ -27,7 +27,7 @@ Comment.init(
             }
         },
         gem_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'gem',
