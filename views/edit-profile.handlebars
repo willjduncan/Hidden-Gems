@@ -1,0 +1,26 @@
+<section class="bg-img">
+    <div>|</div>
+    <div id="edit-form" class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title pl-3" id="edit-user-title">{{user.username}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body pl-5 pr-5">
+            <div class="form-group">
+                <label for="edit-email">Email</label>
+                <input type="text" class="form-control" name="edit-email" value="{{user.email}}" />
+            </div>
+            <div class="form-group">
+                <label for="edit-gem-desc">New Password</label>
+                <input class="form-control">
+            </div>
+                <a id="go-back-btn" class="btn btn-secondary" href="/dashboard">Go Back</a>
+                <button id="confirm-prof-edit" type="button" class="btn btn-primary">Confirm Edit</button>
+            </div>
+        </div>
+    </div>
+    <div>'</div>
+</section>

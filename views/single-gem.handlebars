@@ -1,0 +1,74 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet"/>
+
+<article class="post post-box">
+    <div class="view gem-bg-img">
+        <img class="gem-img" src="/images/cascades.png" alt="A beautful view of the young mountains from the Maple Pass Loop">
+        <div id="mask-arrange" class="mask">
+            <h3 class="caption title gem-title c-five">{{title}}</h3>
+        </div>
+    </div>
+    <span class="post-header ml-gem mt-3 pt-2 mb-2">
+        Created by {{user.username}} on {{format_date created_at}}
+    </span>
+  <div class="row info-box">
+      <div class="col-sm-12 col-lg-5 info-border m-3">
+          <h4 class="mt-2">By the Numbers</h4>
+          <p>Annual Number of Visitors: {{visitors}}</p>
+      </div>
+      <div class="col-sm-12 col-lg-5 info-border m-3">
+          <h4 class="mt-2">Location</h4>
+           {{#if city}}
+            <p>{{city}}, {{state}}, {{country}}</p>
+            {{else}}
+            <p>{{state}}, {{country}}</p>
+            {{/if}}
+          {{#if lon}}
+            <p>Latitude: {{lat}}</p>
+            <p>Longitude: {{lon}} </p>
+            {{/if}}
+          
+      </div>
+    <div>
+        <h4 id="desc-title" class="mt-3">Desription:</h4>
+        <p class="desc-text mb-4">{{description}}</p> 
+            {{!-- Less than three hours from Seattle, an alpine landscape beckons. 
+            Discover communities of life adapted to moisture in the west and recurring fire in the east. 
+            Explore jagged peaks crowned by more than 300 glaciers. 
+            Listen to cascading waters in forested valleys. Witness a landscape sensitive to the Earth's changing climate. 
+            Help steward the ecological heart of the Cascades.
+            Access to North Cascades National Park and Ross Lake National Recreation Area is from the State Route 20 corridor. 
+            SR 20 (North Cascades Highway) connects with Interstate 5 (Exit 230) at Burlington. 
+            From the east, the highway intersects with US 97 at Okanogan and with SR 153 at Twisp. 
+            The State Department of Transportation closes a portion of the road between Ross Dam Trailhead and Lone Fir Campground in winter. 
+            The Lake Chelan National Recreation Area (Stehekin) is accessible by ferry or plane from Chelan. --}}
+    </div>
+  </div>
+
+
+    {{#if loggedIn}}
+    <form class="comment-form mt-5">
+        <div class="d-flex justify-content-around">
+            <div class="col-sm-12 col-md-7 d-flex justify-content-between flex-wrap">
+                {{#if gem.comments}}
+                <h3 class="col-sm-12 col-md-7 mb-4"> {{comments.length}} {{format_plural "comment" comments.length}}</h3>
+                {{else}}
+                <h3 class="col-sm-12 col-md-7 mb-4">Be the first to comment</h3>
+                {{/if}}
+                <input class="comment-input ml-3" name="comment-body" placeholder="Comment..." rows="1"></input>
+                <button class="ml-1 mr-2 comment-btn" type="submit">Add Comment</button>
+            </div>
+        <div class="col-sm-12 col-md-3 d-flex justify-content-center flex-wrap side-border">
+            <h3 class="w-100 text-center"> {{vote_count}} {{format_plural "point" vote_count}}</h3>
+            <button class="upvote-btn " type="submit">Upvote</button>
+        </div>
+        </div>
+    </form>
+    {{/if}}
+
+    {{> comments gem.comments}}
+
+    {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+    {{/if}}
+</article>
+

@@ -58,9 +58,10 @@ Gem.init(
         allowNull: false,
     },
     visitors: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
+    //FIX PIC
     pic: {
         type: DataTypes.STRING,
         allowNull: false,
