@@ -1,67 +1,22 @@
-<section id="edit-bg">
+<section class="bg-img">
     <div>|</div>
     <div id="edit-form" class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title pl-3" id="edit-gem-title">Make your edits and updates here</h5>
+            <h5 class="modal-title pl-3" id="edit-user-title">{{user.username}}Jake</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
             <div class="modal-body pl-5 pr-5">
             <div class="form-group">
-                <label for="edit-gem-title">*Title</label>
-                <input type="text" id="edit-gem-title" name="edit-gem-title" value="{{gem.title}}" />
-            </div>
-            <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
-            <div class="form-group">
-                <label for="edit-gem-desc">*Description</label>
-                <textarea class="form-control" id="edit-gem-desc" rows="10" value="{{gem.description}}"></textarea>
-            </div>
-            <div class="form-group mb-2">
-                <label for="edit-gem-country">*Country</label>
-                <select class="selectpicker countrypicker" id="edit-gem-country" data-default="US" data-live-search="true"></select>
+                <label for="edit-email">Email</label>
+                <input type="text" class="form-control" name="edit-email" value="{{user.email}}" />
             </div>
             <div class="form-group">
-                <label for="edit-gem-state">*State/Province</label>
-                <input id="edit-gem-state" name="edit-gem-state" value="{{gem.state}}" />
+                <label for="edit-gem-desc">New Password</label>
+                <input class="form-control">
             </div>
-            <div class="form-group">
-                <label for="edit-gem-city">City</label>
-                <input type="text" id="edit-gem-city" name="edit-gem-city" value="{{gem.city}}" />
-            </div>
-            <p class="font-italic">Please use decimal degrees for coordinates (i.e. 15.23456, -30.67890)</p>
-            <div class="form-group">
-                <label for="edit-gem-lat">Latitude</label>
-                <input id="edit-gem-lat" name="edit-gem-lat" value="{{gem.lat}}" />
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-lon">Longitude</label>
-                <input type="text" id="edit-gem-lon" name="edit-gem-lon" value="{{gem.lon}}" />
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-visit">*Annual Number of Visitors</label>
-                <input id="edit-gem-visit" name="edit-gem-visit" value="{{gem.visitors}}" />
-            </div>
-                <div class="form-group">
-                <label for="edit-gem-activity">*Activity Type</label>
-                <select class="form-control" id="edit-gem-activity">
-                    <option class="disabled">Choose One</option>
-                    <option>Outdoors</option>
-                    <option>Museum</option>
-                    <option>Restaurant</option>
-                    <option>Entertainment</option>
-                    <option>Other</option>
-                </select>
-            </div>
-            <p class="font-italic">Please submit files less than 20MB</p>
-            <div class="form-group">
-                <label for="edit-gem-photo">*Upload Photograph</label>
-                <input type="file" class="form-control-file" id="edit-gem-photo">
-            </div>
-            </div>
-            <div class="modal-footer">
-                <p class="mr-4">Please fill out all required (*) fields</p>
                 <a id="go-back-btn" class="btn btn-secondary" href="/dashboard">Go Back</a>
                 <button type="button" class="btn btn-primary">Confirm Edit</button>
             </div>

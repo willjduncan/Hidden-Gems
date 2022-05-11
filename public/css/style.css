@@ -38,11 +38,15 @@ nav ul li a {
     font-size: 2em;
     color: var(--tertiary);
 }
-  
+
 header h1 a {
     font-size: 2.2em;
     color: var(--tertiary);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 3rem;
+}
+.nav-item a {
+    padding-right: 3rem;
 }
 
 /* MAIN */
@@ -289,7 +293,7 @@ button:hover {
 
 
 /* ADD GEM MODAL */
-#add-gem-title, #edit-gem-title {
+#add-gem-title, #edit-gem-title, #edit-user-title {
     font-size: 1.5em;
     color: var(--secondary);
 }
@@ -306,7 +310,7 @@ button:hover {
     max-width: none;
     width: 67%;
 }
-#edit-bg {
+#edit-bg, .bg-img {
     background-image: url("../images/edit-gem-mountain.jpg");
     background-size: cover;
     background-position: 80%;
@@ -319,6 +323,12 @@ button:hover {
 #go-back-btn:hover {
     /* color: var(--tertiary); */
     background-color: var(--primary);
+}
+
+/* EDIT PROFILE */
+.bg-img {
+   padding: 100px 0;;
+
 }
 
 
@@ -422,15 +432,69 @@ Make bootstrap-select work with bootstrap 4
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
-    
+    #edit-form {
+        width: 100%;
+        font-size: 1.5em;
+        line-height: 3;
+    }
+    #go-back-btn, #delete-gem-btn, #confirm-edit-btn {
+        margin: 15px;
+        padding: 12px 25px;
+        font-size: 2em;
+    }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
+    .intro {
+        /* background-image: none; */
+        /* background-color: var(--tertiary ); */
+        /* opacity: .6; */
+        
+    }
+    .home-text, .home-title {
+        width: 50%;
+        margin-right: auto;
+        margin-left: 6%;
+    }
 
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen  and (max-width: 575px) {
+    .intro {
+        background-image: none;
+        background-color: var(--tertiary );
+        height: fit-content;
+        padding-bottom: 30px;
+        
+    }
+    .home-text, .home-title {
+        width: 80%;
+        margin-left: auto;
+    }  
+    #main-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: auto;
+        margin: auto;
+    }
+    #navbar {
+        padding: 50px;
+    }
+    #top-gem-title {
+        width: 80%;
+        margin: auto;
+    }
+    #main-header h1 {
+        font-size: 2em;
+    }
+    #main-header h1 a {
+        margin-left: auto;
+    }
+    .nav-item a {
+        padding: 5px;
+    }
 
 }

@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
   <link rel="stylesheet" href="/css/style.css">
-  {{!-- Gem icons created by Freepik - Flaticon --}}
   <link rel="icon" href="/images/gems.png" type="image/x-icon">
   <title>Hidden Gems</title>
 </head>
@@ -16,9 +15,9 @@
 <body>
   <header id="main-header" class="shadow">
     <h1>
-        <a class="bold ml-5 ts-1" href="/">Hidden Gems</a> 
+        <a class="bold ts-1" href="/">Hidden Gems</a> 
     </h1>
-    <nav>
+    <nav id="navbar">
       <ul class="nav">
         {{#if loggedIn}}
           <li class="nav-item">
@@ -29,7 +28,7 @@
           </li>
         {{else}}
         <li class="nav-item">
-          <a class="ts-1 pr-5" href="/login">Login</a>
+          <a class="ts-1" href="/login">Login</a>
         </li>
         {{/if}}
       </ul>
@@ -54,9 +53,6 @@
     </footer>
 </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> --}}
-  {{!-- <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script> --}}
-  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script> --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </html>
