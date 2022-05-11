@@ -112,7 +112,7 @@ Screenshots of the ............... files are below:
 
 ## Credits
 
-The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. 
+The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. 
 
 <!-- OTHER CREDITS -->
 
@@ -126,7 +126,12 @@ The coding boot camp Professional README Guide found at https://coding-boot-camp
 
 ## Future Additions
 
-<!-- ADD FUTURE ADDITIONS -->
+First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, and adding an "are you sure?" modal when the delete gem button is clicked. 
+Some of the bigger improvements to be made include the following:
+    -adding maps to each gem so the user can see its location better (MapBox is probably the best option)
+    -adding the ability to favorite a gem, and then, if you go to the home page, populating the body with favorite gems instead of top-voted gems. 
+    -adding a search bar and the ability to search for gems based on state, country, and activity
+    -adding an entire sister site titled "Local Gems," where the focus is more city-based rather than tourism-based (looking for hole-in-the-wall restaurants, unknown activities and shops, etc.)
 
 
 
@@ -172,7 +177,7 @@ Github:
         
 MIT License
 
-<!-- Copyright (c) [2022] [willjduncan ADD NAMES] -->
+Copyright (c) [2022] [willjduncan, rbenne30, and Obtains]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -194,11 +199,4 @@ SOFTWARE.
 
 <!-- OTHER TO-DOs:
 double check media queries once everything's hooked up
-Double check all handlebars data is correctly hooked up
-EDIT GEM:
-Add the Delete Gem ability with a modal that pops up and asks "Are you sure you want to delete this gem?" State (make a dropdown of options of states and US Territories, but only if the Country value is the USA. Otherwise, make it a typed-in input)
-ADD GEM: 
-Activity Type (Again, create a dropdown of the main activity types we plan to have. When you have more time, also provide an Other option, where an additional input box appears for the user to type in a new activity if we don't have it already).
-Provide an option for the city name, as well as longitude and Latitude coordinates. Star the ones above, since they're required. Change the font type if not all the required answers are indeed answered and redirect the page to the part of the page that says
-"Please make sure to fill out all required * fields"npm seeds
--->
+Double check all handlebars data is correctly hooked up -->
