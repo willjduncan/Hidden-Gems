@@ -56,15 +56,20 @@ Gem.init(
     state: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          len: [3]
+      }
     },
     visitors: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    //FIX PIC
     pic: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isUrl: true,
+      }
     },
     activity_type: {
         type: DataTypes.STRING(50),

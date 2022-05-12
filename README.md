@@ -12,7 +12,7 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-- [Future Additions](#future additions)
+- [Additions](#additions)
 - [License](#license)  
         
 
@@ -81,8 +81,10 @@ THEN I see it is of high quality, including a unique name, description, technolo
 Work was split in the following ways:
 
 Will: Handlebars, CSS, utils, models, README.
-Ryanne: All Controllers
-David: Seeds, front-end JS
+Ryanne: All Controllers, Presentation
+David: Wireframe, Seeds, front-end JS
+
+Our biggest challenges 
 
 
 <!-- ADD DESCRIPTION OF DEVELOPMENT OF THE PROGRAM -->
@@ -102,23 +104,32 @@ While this project's repository is available on Github, the site it deployed to 
 
 Once the project is cloned and the dependencies downloaded, type "npm start" to run the program. 
 
-A screenshot of the program in action is shown below, logged out and logged in;
+A screenshot of the program in action is shown below, at the home screen, editing a gem, and logging in;
+
+![screenshot of Active Site, Home Screen](./public/images/screenshot-home.png)
+
+![screenshot of Active Site, editing a Gem](./public/images/screenshot-edit.png)
+
+![screenshot of Active Site, Login](./public/images/screenshot-login.png)
 
 <!-- ADD IMAGES -->
-![screenshot of Active Site, Logged Out](/images/screenshot-logout.png)
-![screenshot of Active Site, Logged In](/images/screenshot-login.png)
+Screenshots of the dashboard.handlebars file, edit-gem.js, gem-routes.js, and model files are below, displaying the steps submitting a gem takes: 
 
-<!-- ADD IMAGES, DECIDE WHICH FILES TO Include -->
-Screenshots of the ............... files are below: 
-
-![screenshot of ...](/images/screenshot-...-.png)
-![screenshot of ...](/images/screenshot-...-.png)
-![screenshot of ...](/images/screenshot-...-.png)
+![screenshot of dashboard.handlebars](./public/images/screenshot-dashboard.png)
+![screenshot of add-gem.js](./public/images/screenshot-edit-gem.png)
+![screenshot of gem-routes.js](./public/images/screenshot-gem-routes.png)
+![screenshot of gem model](./public/images/screenshot-model.png)
 
 
 ## Credits
 
 The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
+
+Special Thank to:
+Luiz (TA)
+Luke (TA)
+Jack (Instructor)
+Sandra (TA)
 
 <!-- OTHER CREDITS -->
 
@@ -129,9 +140,9 @@ The coding boot camp Professional README Guide found at https://coding-boot-camp
 If you make changes, test it locally on a branch before pushing to main. Clone from the github site and make sure to create your own .env file with your own credentials.
 
 
-## Future Additions
+## Additions
 
-First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, and adding an "are you sure?" modal when the delete gem button is clicked. 
+First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, adding alt text for the uploaded photos, and adding an "are you sure?" modal when the delete gem button is clicked. 
 Some of the bigger improvements to be made include the following:
     -adding maps to each gem so the user can see its location better (MapBox is probably the best option)
     -adding the ability to favorite a gem, and then, if you go to the home page, populating the body with favorite gems instead of top-voted gems. 
@@ -161,17 +172,16 @@ The application is deployed on Heroku. The site is below:
 
 
 
-For any additional questions, I can be reached at the following
+For any additional questions, we can be reached at the following
 
 Will Duncan: willdunc12@gmail.com
 Github: [https://github.com/willjduncan](https://github.com/willjduncan)
 
-<!-- ADD CONTACT INFO -->
-Ryanne Bennett: 
-Github: 
+Ryanne Bennett: ryannebennett1@outlook.com
+Github: [https://github.com/rbenne30](https://github.com/rbenne30)
 
-David Shaw: 
-Github: 
+David Shaw: hawkhilt@gmail.com
+Github: [https://github.com/Obtains](https://github.com/Obtains)
 
 
 
