@@ -13,56 +13,59 @@
             </button>
             </div>
             <div class="modal-body pl-5 pr-5">
-            <div class="form-group">
-                <label for="edit-gem-title">*Title</label>
-                <input type="text" id="edit-gem-title" name="edit-gem-title" value="{{gem.title}}" />
-            </div>
-            <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
-            <div class="form-group">
-                <label for="edit-gem-desc">*Description</label>
-                <textarea class="form-control" id="edit-gem-desc" rows="10" value="{{gem.description}}"></textarea>
-            </div>
-            <div class="form-group mb-2">
-                <label for="edit-gem-country">*Country</label>
-                <select class="selectpicker countrypicker" id="edit-gem-country" data-default="US" data-live-search="true"></select>
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-state">*State/Province</label>
-                <input id="edit-gem-state" name="edit-gem-state" value="{{gem.state}}" />
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-city">City</label>
-                <input type="text" id="edit-gem-city" name="edit-gem-city" value="{{gem.city}}" />
-            </div>
-            <p class="font-italic">Please use decimal degrees for coordinates (i.e. 15.23456, -30.67890)</p>
-            <div class="form-group">
-                <label for="edit-gem-lat">Latitude</label>
-                <input id="edit-gem-lat" name="edit-gem-lat" value="{{gem.lat}}" />
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-lon">Longitude</label>
-                <input type="text" id="edit-gem-lon" name="edit-gem-lon" value="{{gem.lon}}" />
-            </div>
-            <div class="form-group">
-                <label for="edit-gem-visit">*Annual Number of Visitors</label>
-                <input id="edit-gem-visit" name="edit-gem-visit" value="{{gem.visitors}}" />
-            </div>
-                <div class="form-group">
-                <label for="edit-gem-activity">*Activity Type</label>
-                <select class="form-control" id="edit-gem-activity">
-                    <option class="disabled">Choose One</option>
-                    <option>Outdoors</option>
-                    <option>Museum</option>
-                    <option>Restaurant</option>
-                    <option>Entertainment</option>
-                    <option>Other</option>
-                </select>
-            </div>
-            <p class="font-italic">Please submit files less than 20MB</p>
-            <div class="form-group">
-                <label for="edit-gem-photo">*Upload Photograph</label>
-                <input type="file" class="form-control-file" id="edit-gem-photo">
-            </div>
+                <form>
+
+                    <div class="form-group">
+                        <label for="edit-gem-title">*Title</label>
+                        <input type="text" id="edit-gem-title" name="edit-gem-title" value="{{gem.title}}" />
+                    </div>
+                    <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
+                    <div class="form-group">
+                        <label for="edit-gem-desc">*Description</label>
+                        <textarea class="form-control" id="edit-gem-desc" rows="10" value="{{gem.description}}"></textarea>
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="edit-gem-country">*Country</label>
+                        <select class="selectpicker countrypicker" id="edit-gem-country" data-default="US" data-live-search="true"></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-gem-state">*State/Province</label>
+                        <input id="edit-gem-state" name="edit-gem-state" value="{{gem.state}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-gem-city">City</label>
+                        <input type="text" id="edit-gem-city" name="edit-gem-city" value="{{gem.city}}" />
+                    </div>
+                    <p class="font-italic">Please use decimal degrees for coordinates (i.e. 15.23456, -30.67890)</p>
+                    <div class="form-group">
+                        <label for="edit-gem-lat">Latitude</label>
+                        <input id="edit-gem-lat" name="edit-gem-lat" value="{{gem.lat}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-gem-lon">Longitude</label>
+                        <input type="text" id="edit-gem-lon" name="edit-gem-lon" value="{{gem.lon}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-gem-visit">*Annual Number of Visitors</label>
+                        <input id="edit-gem-visit" name="edit-gem-visit" value="{{gem.visitors}}" />
+                    </div>
+                        <div class="form-group">
+                        <label for="edit-gem-activity">*Activity Type</label>
+                        <select class="form-control" id="edit-gem-activity">
+                            <option class="disabled">Choose One</option>
+                            <option>Outdoors</option>
+                            <option>Museum</option>
+                            <option>Restaurant</option>
+                            <option>Entertainment</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <p class="font-italic">Please submit files less than 20MB</p>
+                    <div class="form-group">
+                        <label for="edit-gem-photo">*Upload Photograph</label>
+                        <input type="file" id="edit-gem-photo" name="edit-gem-photo" class="simple-file-upload form-control-file">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <p class="mr-5">Please fill out all required (*) fields</p>

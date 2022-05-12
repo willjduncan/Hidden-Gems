@@ -22,6 +22,7 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
         </button>
       </div>
       <div class="modal-body pl-5">
+        <form>
           <p class="font-italic">Name a great place that isn't well-known</p>
         <div class="form-group">
             <label for="gem-title">*Title</label>
@@ -69,9 +70,10 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
         </div>
         <div class="form-group">
             <label for="gem-photo">*Upload Photograph</label>
-            <input type="file" class="form-control-file" id="gem-photo">
+            <input type="file" id="gem-photo" name="gem-photo" class="simple-file-upload">
         </div>
       </div>
+        </form>
       <div class="modal-footer">
           <p class="mr-4">Please fill out all required (*) fields</p>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
