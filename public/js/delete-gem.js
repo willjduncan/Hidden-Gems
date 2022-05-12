@@ -16,4 +16,4 @@ async function deleteFormHandler(event) {
     }
 };
 
-document.querySelector(".delete-gem-btn").addEventListener("click", deleteFormHandler);
+document.querySelector(".btn btn-danger").addEventListener("click", deleteFormHandler);
