@@ -13,7 +13,7 @@ const withAuth = (req, res, next) => {
 
 
 // homepage
-router.get("/api/home", (req, res) => {
+router.get("/home", (req, res) => {
   res.render("home");
 });
 

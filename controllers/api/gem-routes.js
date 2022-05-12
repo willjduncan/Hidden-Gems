@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Gem } = require('../../models');
 
 
-router.get("/", (req, res) => {
+router.get("/Gem", (req, res) => {
   Gem.findAll()
     .then(dbUserDATA => res.json(dbUserData))
     .catch(err => {
@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/Gem', (req, res) => {
   Gem.create({
     title: req.body.title,
     description: req.body.description,
