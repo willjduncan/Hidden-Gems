@@ -4,13 +4,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://app.simplefileupload.com/buckets/86305b60def9b093f97c3b5a7b6c063b.js"></script>
+  <link rel="icon" href="/images/gems.png" type="image/x-icon">
+  <title>Hidden Gems</title>
 </head>
 
 <body>
+  <header id="main-header" class="shadow">
+    <h1>
+        <a class="bold ts-1" href="/">Hidden Gems</a> 
+    </h1>
+    <nav id="navbar">
+      <ul class="nav">
+        {{#if loggedIn}}
+          <li class="nav-item">
+            <a class="ts-1" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <button id="logout" class="btn-no-style ts-1">Logout</button>
+          </li>
+        {{else}}
+        <li class="nav-item">
+          <a class="ts-1" href="/login">Login</a>
+        </li>
+        {{/if}}
+      </ul>
+    </nav>
+  </header>
   <main>
     {{{body}}}
   </main>
+      <footer class="mb-3 bg-pri">
+        <div class="container mt-4 mb-4">
+          <div class="row foot-text">
+            <div class="col-md-6 col-sm-12 ts-1">
+              <p class="p-0 mb-0"><small>Copyright © 2022 Hidden Gems</small></p>
+              <p class="p-0"><small>All rights reserved.</small></p>
+            </div>
+            <div class="col-md-6 col-sm-12 ts-1">
+              <p class="p-0 mb-0"><small>Thanks for visiting!</small></p>
+              <a class="p-0 foot-text" href="https://www.flaticon.com/free-icons/gems" title="gems icons" target="_blank"><small>Gems icons created by Freepik and deemakdaksina - Flaticon</small></a>
+            </div>
+          </div>
+        </div>
+    </footer>
 </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </html>

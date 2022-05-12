@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
+const sequelize = require('../config/config.js');
 
 // create our Gem model
 class Gem extends Model {
@@ -61,6 +61,7 @@ Gem.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    //FIX PIC
     pic: {
       type: DataTypes.STRING,
       allowNull: false,

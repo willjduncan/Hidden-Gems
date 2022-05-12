@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Gem, Vote, Comment } = require('../../models');
 
 const withAuth = (req, res, next) => {
   if (!req.session.user_id) {
@@ -12,6 +12,7 @@ const withAuth = (req, res, next) => {
 router.post('/user', (req, res) => {
   User.create({
     username: req.body.username,
+    email: req.body.email,
     password: req.body.password
   })
     .then(dbUserData => {

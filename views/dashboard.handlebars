@@ -1,0 +1,111 @@
+{{!-- These allow the functionality of the country dropdown menu --}}
+<link rel="stylesheet" href="//unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="//unpkg.com/bootstrap-select@1.12.4/dist/css/bootstrap-select.min.css" type="text/css" />
+<link rel="stylesheet" href="//unpkg.com/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css" type="text/css" /><!-- Button trigger modal -->
+
+{{!-- Buttons for creating gems and editing profile --}}
+<button type="button" id="add-gem-btn" class="edit-link" data-toggle="modal" data-target="#add-gem-modal">
+  Create New Gem <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt="">
+</button>
+<a id="edit-prof-btn" class="edit-link" href="/edit/user/:id"> 
+Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17" alt="">
+</a>
+
+<!-- Add Gem Modal -->
+<div class="modal fade " id="add-gem-modal" tabindex="-1" role="dialog" aria-labelledby="add-gem-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title pl-5" id="add-gem-title">New Gem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pl-5">
+        <form>
+          <p class="font-italic">Name a great place that isn't well-known</p>
+        <div class="form-group">
+            <label for="gem-title">*Title</label>
+            <input type="text" id="gem-title" name="gem-title" />
+        </div>
+        <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
+        <div class="form-group">
+            <label for="gem-desc">*Description</label>
+            <textarea class="form-control" id="gem-desc" rows="10"></textarea>
+        </div>
+        <div class="form-group mb-2">
+            <label for="gem-country">*Country</label>
+            <select class="selectpicker countrypicker" id="gem-country" data-default="US" data-live-search="true"></select>
+        </div>
+        <div class="form-group">
+            <label for="gem-state">*State/Province</label>
+            <input id="gem-state" name="gem-state" />
+        </div>
+        <div class="form-group">
+            <label for="gem-city">City</label>
+            <input type="text" id="gem-city" name="gem-city" />
+        </div>
+        <p class="font-italic">Please use decimal degrees for coordinates (i.e. 15.23456, -30.67890)</p>
+        <div class="form-group">
+            <label for="gem-lat">Latitude</label>
+            <input id="gem-lat" name="gem-lat" />
+        </div>
+        <div class="form-group">
+            <label for="gem-lon">Longitude</label>
+            <input type="text" id="gem-lon" name="gem-lon" />
+        </div>
+        <div class="form-group">
+            <label for="gem-visit">*Annual Number of Visitors</label>
+            <input id="gem-visit" name="gem-visit" />
+        </div>
+         <div class="form-group">
+            <label for="gem-activity">*Activity Type</label>
+            <select class="form-control" id="gem-activity">
+                <option>Outdoors</option>
+                <option>Museum</option>
+                <option>Restaurant</option>
+                <option>Entertainment</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gem-photo">*Upload Photograph</label>
+            <input type="file" id="gem-photo" name="gem-photo" class="simple-file-upload">
+        </div>
+      </div>
+        </form>
+      <div class="modal-footer">
+          <p class="mr-4">Please fill out all required (*) fields</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit Gem</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Previously made gems --}}
+{{#if gems.length}}
+<section>
+  <div class ="c-sec">
+    <h2 id="top-gem-title" class="bold pt-2 pl-3 ts-2 text-center">Your Gems</h2>
+  </div>
+  <div class="gem-list row">
+    {{#each gems as |gem|}}
+    <div class="col-sm-12 col-med-6 col-lg-4 p-4 ml-3">
+        {{> gem-card gem }}
+        {{> gem-card }}
+            <a id="a-dash" href="/edit/{{post.id}}" class="edit-link">Edit post <img src="/images/icon.png" class="icon-btn" width="17" height="17"></a>
+    </div>
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+<script src="/public/js/add-gem.js"></script>
+<script src="//unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="//unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="//unpkg.com/bootstrap-select@1.12.4/dist/js/bootstrap-select.min.js"></script>
+<script src="//unpkg.com/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script>
+<script>
+    $('.countrypicker').countrypicker();
+</script>

@@ -1,0 +1,16 @@
+{{!-- Gem card- provides a picture, the title, the number of votes, and the number of comments --}}
+<card class="card">
+    <div class="card-img-top">
+        <img class="img-fluid" src="{{pic}}" alt="">
+    </div>
+    <div class="card-body card-style">
+        <div class="title">
+            <a href="/gem/{{id}}">{{title}}</a>
+        </div>
+        <div>
+            {{vote_count}} {{format_plural "point" vote_count}}
+            |
+            <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
+        </div>
+    </div>
+</card>
