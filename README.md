@@ -78,8 +78,14 @@ WHEN I look at the README,
 
 THEN I see it is of high quality, including a unique name, description, technologies used, screenshot, and link to deployed application).
 
-<!-- ADD DESCRIPTION OF DEVELOPMENT OF THE PROGRAM -->
+Work was split in the following ways:
 
+Will: Handlebars, CSS, utils, models, README.
+Ryanne: All Controllers
+David: Seeds, front-end JS
+
+
+<!-- ADD DESCRIPTION OF DEVELOPMENT OF THE PROGRAM -->
 
 
 
@@ -112,7 +118,7 @@ Screenshots of the ............... files are below:
 
 ## Credits
 
-The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. 
+The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
 
 <!-- OTHER CREDITS -->
 
@@ -120,8 +126,7 @@ The coding boot camp Professional README Guide found at https://coding-boot-camp
 
 ## Contributing
 
-<!-- HOW TO CONTRIBUTE -->
-
+If you make changes, test it locally on a branch before pushing to main. Clone from the github site and make sure to create your own .env file with your own credentials.
 
 
 ## Future Additions
@@ -132,13 +137,14 @@ Some of the bigger improvements to be made include the following:
     -adding the ability to favorite a gem, and then, if you go to the home page, populating the body with favorite gems instead of top-voted gems. 
     -adding a search bar and the ability to search for gems based on state, country, and activity
     -adding an entire sister site titled "Local Gems," where the focus is more city-based rather than tourism-based (looking for hole-in-the-wall restaurants, unknown activities and shops, etc.)
+    -adding profile pictures
+    -adding ability to submit more than one photo per gem, and coming up with a good way to cycle through them
 
 
 
 ## Tests
 
-<!-- ADD TESTS   -->
-
+No Jest tests written were made for this project, but Insomnia is a critical tool in letting you test the program's GET, POST, PUT, and DELETE methods. If you want to run tests, download Insomnia or some similar program, activate the program in Terminal using "npm start", and then use the Localhost URL to try the different methods.
 
 
 ## Questions
