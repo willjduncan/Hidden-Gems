@@ -2,15 +2,15 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector("input[name='gem-title']").value;
-  const description = document.querySelector("input[name='description']").value;
-  const country = document.querySelector("input[name='country']").value;
-  const state = document.querySelector("input[name='state']").value;
-  const visitors = document.querySelector("input[name='visitors']").value;
-  const pic = document.querySelector("input[name='pic']").value;
-  const activity_type = document.querySelector("input[name='activity_type']").value;
-  const city = document.querySelector("input[name='city']").value;
-  const lon = document.querySelector("input[name='lon']").value;
-  const lat = document.querySelector("input[name='lat']").value;
+  const description = document.querySelector("textarea[name='gem-desc']").value;
+  const country = document.querySelector("select[name='gem-country']").value;
+  const state = document.querySelector("input[name='gem-state']").value;
+  const visitors = document.querySelector("input[name='gem-visit']").value;
+  const pic = document.querySelector("input[name='gem-photo']").value;
+  const activity_type = document.querySelector("select[name='gem-activity']").value;
+  const city = document.querySelector("input[name='gem-city']").value;
+  const lon = document.querySelector("input[name='gem-lon']").value;
+  const lat = document.querySelector("input[name='gem-lat']").value;
 
   const response = await fetch("/api/gem", {
     method: "POST",
@@ -34,4 +34,4 @@ async function newFormHandler(event) {
   }
 };
 
-document.querySelector(".new-gem-form").addEventListener("submit", newFormHandler);
+document.querySelector(".btn btn-primary").addEventListener("submit", newFormHandler);
