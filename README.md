@@ -85,7 +85,9 @@ For us, the project is meant to not only test our coding abilities from start to
 Work was split in the following ways:
 
 Will: Handlebars, CSS, utils, models, README.
+
 Ryanne: All Controllers, Presentation
+
 David: Wireframe, Seeds, front-end JS
 
 We aimed to each work on our separate parts and meld them together later in the development stage, using hardcoding for handlebars and Insomnia for the controllers to make sure everything worked before pushing it. 
@@ -116,9 +118,9 @@ A screenshot of the program in action is shown below, at the home screen, editin
 ![screenshot of Active Site, Login](./public/images/screenshot-login.png)
 
 <!-- ADD IMAGES -->
-Screenshots of the dashboard.handlebars file, edit-gem.js, gem-routes.js, and model files are below, displaying the steps submitting a gem takes: 
+Screenshots of the edit-gem.handlebars file, edit-gem.js, gem-routes.js, and model files are below, displaying the steps submitting a gem takes: 
 
-![screenshot of dashboard.handlebars](./public/images/screenshot-dashboard.png)
+![screenshot of edit-gem.handlebars](./public/images/screenshot-handlebars.png)
 ![screenshot of edit-gem.js](./public/images/screenshot-edit-gem.png)
 ![screenshot of gem-routes.js](./public/images/screenshot-gem-routes.png)
 ![screenshot of gem model](./public/images/screenshot-model.png)
