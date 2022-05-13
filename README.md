@@ -78,16 +78,19 @@ WHEN I look at the README,
 
 THEN I see it is of high quality, including a unique name, description, technologies used, screenshot, and link to deployed application).
 
+By creating this application, we hope that some of the lesser-known opportunities get their due, and that we improve the quality of vacation our users go on. 
+
+For us, the project is meant to not only test our coding abilities from start to finish and encapsulate all the skills and tools we've learned, but more importantly, our ability to stay organized and work together. In a professional environment, division of labor and integration of multiple people's contributions are a critical and typical part of daily life. Maintaining organized file and code and good communication with issues and github activity is one of the biggest tests this project poses.
+
 Work was split in the following ways:
 
 Will: Handlebars, CSS, utils, models, README.
 Ryanne: All Controllers, Presentation
 David: Wireframe, Seeds, front-end JS
 
-Our biggest challenges 
+We aimed to each work on our separate parts and meld them together later in the development stage, using hardcoding for handlebars and Insomnia for the controllers to make sure everything worked before pushing it. 
 
 
-<!-- ADD DESCRIPTION OF DEVELOPMENT OF THE PROGRAM -->
 
 
 
@@ -116,22 +119,21 @@ A screenshot of the program in action is shown below, at the home screen, editin
 Screenshots of the dashboard.handlebars file, edit-gem.js, gem-routes.js, and model files are below, displaying the steps submitting a gem takes: 
 
 ![screenshot of dashboard.handlebars](./public/images/screenshot-dashboard.png)
-![screenshot of add-gem.js](./public/images/screenshot-edit-gem.png)
+![screenshot of edit-gem.js](./public/images/screenshot-edit-gem.png)
 ![screenshot of gem-routes.js](./public/images/screenshot-gem-routes.png)
 ![screenshot of gem model](./public/images/screenshot-model.png)
 
 
 ## Credits
 
-The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
+The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. JAWSDB and Simple File Upload were also added to our heroku app to allow our app to function on heroku and let users upload images, respectively. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
 
-Special Thank to:
+Special Thanks to the following for their input and help:
+Jack (Instructor)
 Luiz (TA)
 Luke (TA)
-Jack (Instructor)
 Sandra (TA)
 
-<!-- OTHER CREDITS -->
 
 
 
@@ -168,7 +170,7 @@ The github repository to this project is below:
 
 The application is deployed on Heroku. The site is below:
 
-<!-- [https://thawing-springs-82201.herokuapp.com/](https://thawing-springs-82201.herokuapp.com/) -->
+[https://thawing-springs-82201.herokuapp.com/](https://thawing-springs-82201.herokuapp.com/)
 
 
 
@@ -212,7 +214,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-<!-- OTHER TO-DOs:
-double check media queries once everything's hooked up
-Double check all handlebars data is correctly hooked up -->
