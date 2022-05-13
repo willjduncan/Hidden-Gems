@@ -295,7 +295,7 @@ button:hover {
 
 
 /* ADD GEM MODAL */
-#add-gem-title, #edit-gem-title, #edit-user-title {
+#add-gem-title, #edit-gem-modal-title, #edit-user-title {
     font-size: 1.5em;
     color: var(--secondary);
 }
