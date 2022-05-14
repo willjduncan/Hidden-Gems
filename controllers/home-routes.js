@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Gem, Comment } = require("../models/");
+const { Gem, Comment, Vote } = require("../models/");
 const withAuth = require('../utils/auth');
 
 // GET all gems for homepage
@@ -9,16 +9,18 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Vote, Comment,
-          attributes: ['title', 'picture', 'creation date'],
+          //attributes: ['title', 'picture', 'creation date'],
         },
       ],
     });
 
-    const gem = dbGemData.map((gem) =>
+    console.log("dbGemData: " + dbGemData)
+
+    const gems = dbGemData.map((gem) =>
       gem.get({ plain: true })
     );
 
-    res.render('homepage', {
+    res.render('home', {
       gems,
       loggedIn: req.session.loggedIn,
     });
