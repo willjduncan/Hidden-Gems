@@ -12,7 +12,7 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-- [Future Additions](#future additions)
+- [Additions](#additions)
 - [License](#license)  
         
 
@@ -78,14 +78,21 @@ WHEN I look at the README,
 
 THEN I see it is of high quality, including a unique name, description, technologies used, screenshot, and link to deployed application).
 
+By creating this application, we hope that some of the lesser-known opportunities get their due, and that we improve the quality of vacation our users go on. 
+
+For us, the project is meant to not only test our coding abilities from start to finish and encapsulate all the skills and tools we've learned, but more importantly, our ability to stay organized and work together. In a professional environment, division of labor and integration of multiple people's contributions are a critical and typical part of daily life. Maintaining organized file and code and good communication with issues and github activity is one of the biggest tests this project poses.
+
 Work was split in the following ways:
 
 Will: Handlebars, CSS, utils, models, README.
-Ryanne: All Controllers
-David: Seeds, front-end JS
+
+Ryanne: All Controllers, Presentation
+
+David: Wireframe, Seeds, front-end JS
+
+We aimed to each work on our separate parts and meld them together later in the development stage, using hardcoding for handlebars and Insomnia for the controllers to make sure everything worked before pushing it. 
 
 
-<!-- ADD DESCRIPTION OF DEVELOPMENT OF THE PROGRAM -->
 
 
 
@@ -102,25 +109,33 @@ While this project's repository is available on Github, the site it deployed to 
 
 Once the project is cloned and the dependencies downloaded, type "npm start" to run the program. 
 
-A screenshot of the program in action is shown below, logged out and logged in;
+A screenshot of the program in action is shown below, at the home screen, editing a gem, and logging in;
+
+![screenshot of Active Site, Home Screen](./public/images/screenshot-home.png)
+
+![screenshot of Active Site, editing a Gem](./public/images/screenshot-edit.png)
+
+![screenshot of Active Site, Login](./public/images/screenshot-login.png)
 
 <!-- ADD IMAGES -->
-![screenshot of Active Site, Logged Out](/images/screenshot-logout.png)
-![screenshot of Active Site, Logged In](/images/screenshot-login.png)
+Screenshots of the edit-gem.handlebars file, edit-gem.js, gem-routes.js, and model files are below, displaying the steps submitting a gem takes: 
 
-<!-- ADD IMAGES, DECIDE WHICH FILES TO Include -->
-Screenshots of the ............... files are below: 
-
-![screenshot of ...](/images/screenshot-...-.png)
-![screenshot of ...](/images/screenshot-...-.png)
-![screenshot of ...](/images/screenshot-...-.png)
+![screenshot of edit-gem.handlebars](./public/images/screenshot-handlebars.png)
+![screenshot of edit-gem.js](./public/images/screenshot-edit-gem.png)
+![screenshot of gem-routes.js](./public/images/screenshot-gem-routes.png)
+![screenshot of gem model](./public/images/screenshot-model.png)
 
 
 ## Credits
 
-The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
+The coding boot camp Professional README Guide found at https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide was used as a template for this README. The license was picked from [https://choosealicense.com/](https://choosealicense.com/).The WHEN/THEN section of this README was based off the project assignment Acceptance Criteria. Most influence was taken from Just-Tech-News of Modules 13 and 14. Stack Overflow, MDN Web Docs, W3, and Google were critical to our success. Bootstrap, JQuery, MySql, Node.js, Insomnia, NPM, Express.js, express-session, Handlebars, Sequelize, bcrypt, and dotenv were used. Pixabay was used for stock photos. Bootstrap-select-country, created by mojoaxel, was implemented in the Add-Gem form. Icons were created by Freepik and deemakdaksina and downloaded from Flaticon. JAWSDB and Simple File Upload were also added to our heroku app to allow our app to function on heroku and let users upload images, respectively. Jack Storrs provided the boilerplate for the project, which was much appreciated. 
 
-<!-- OTHER CREDITS -->
+Special Thanks to the following for their input and help:
+Jack (Instructor)
+Luiz (TA)
+Luke (TA)
+Sandra (TA)
+
 
 
 
@@ -129,9 +144,9 @@ The coding boot camp Professional README Guide found at https://coding-boot-camp
 If you make changes, test it locally on a branch before pushing to main. Clone from the github site and make sure to create your own .env file with your own credentials.
 
 
-## Future Additions
+## Additions
 
-First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, and adding an "are you sure?" modal when the delete gem button is clicked. 
+First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, adding alt text for the uploaded photos, and adding an "are you sure?" modal when the delete gem button is clicked. 
 Some of the bigger improvements to be made include the following:
     -adding maps to each gem so the user can see its location better (MapBox is probably the best option)
     -adding the ability to favorite a gem, and then, if you go to the home page, populating the body with favorite gems instead of top-voted gems. 
@@ -157,21 +172,20 @@ The github repository to this project is below:
 
 The application is deployed on Heroku. The site is below:
 
-<!-- [SITE](SITE) -->
+[https://thawing-springs-82201.herokuapp.com/](https://thawing-springs-82201.herokuapp.com/)
 
 
 
-For any additional questions, I can be reached at the following
+For any additional questions, we can be reached at the following
 
 Will Duncan: willdunc12@gmail.com
 Github: [https://github.com/willjduncan](https://github.com/willjduncan)
 
-<!-- ADD CONTACT INFO -->
-Ryanne Bennett: 
-Github: 
+Ryanne Bennett: ryannebennett1@outlook.com
+Github: [https://github.com/rbenne30](https://github.com/rbenne30)
 
-David Shaw: 
-Github: 
+David Shaw: hawkhilt@gmail.com
+Github: [https://github.com/Obtains](https://github.com/Obtains)
 
 
 
@@ -202,7 +216,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-<!-- OTHER TO-DOs:
-double check media queries once everything's hooked up
-Double check all handlebars data is correctly hooked up -->
