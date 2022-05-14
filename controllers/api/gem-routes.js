@@ -1,15 +1,39 @@
 const router = require('express').Router();
 const { Gem } = require('../../models');
 
-
-router.get("/Gem", (req, res) => {
-  Gem.findAll()
-    .then(dbUserDATA => res.json(dbUserData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+router.get('/', async (req, res) => {
+  try {
+    const dbGemData = await Gem.findAll({
+      include: [
+        {
+          model: Vote, Comment,
+          attributes: ['title', 'picture', 'creation date' ],
+        },
+      ],
     });
+
+    const gem = dbGemData.map((gem) =>
+      gem.get({ plain: true })
+    );
+
+    res.render('homepage', {
+      gems,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
+
+// router.get("/Gem", (req, res) => {
+//   Gem.findAll()
+//     .then(dbUserDATA => res.json(dbUserDATA)
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 router.post('/Gem', (req, res) => {
   Gem.create({
@@ -42,9 +66,12 @@ router.get("/:id", (req, res) => {
 
 });
 
-router.delete('/gem/:body.gem_id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const id = req.params.id
-  res.json({ id: id })
+  //call the destroy sequelize method on a Gem
+  //specify "where" the destroy method needs to act --> id of gem needs to match id from param
+  //".then" res.json the prommise from the destroy method
+
 })
 
 module.exports = router;
