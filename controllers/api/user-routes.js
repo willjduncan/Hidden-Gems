@@ -3,7 +3,7 @@ const { User, Gem, Vote, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //POST /api/user/
-router.post('/user', (req, res) => {
+router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -49,6 +49,35 @@ router.post('/login', (req, res) => {
       req.session.loggedIn = true;
 
       res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+  });
+});
+
+router.put("/edit/user/login", (req, res) => {
+  User.create({
+    where: {
+      password: req.body.password,
+      email: req.body.email
+    }
+  }).then(dbUserData => {
+    if (!dbUserData) {
+      res.status(400).json({ message: 'New password!' });
+      return;
+    }
+
+    const validPassword = dbUserData.changePassword(req.body.Password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: 'Password changed!' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.password = dbUserData.password;
+      req.session.email = dbUserData.email;
+      req.session.loggedIn = true;
+
+      res.json({ user: dbUserData, message: 'Information updated!' });
     });
   });
 });

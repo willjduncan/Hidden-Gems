@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Gem } = require('../../models');
+const { Gem, User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 router.get("/", (req, res) => {
   Gem.findAll()
@@ -10,7 +11,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/',withAuth, (req, res) => {
   Gem.create({
     title: req.body.title,
     description: req.body.description,
@@ -19,6 +20,7 @@ router.post('/', (req, res) => {
     visitors: req.body.visitors,
     pic: req.body.pic,
     activity_type: req.body.activity_type,
+    city: req.body.city,
     user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
@@ -28,21 +30,36 @@ router.post('/', (req, res) => {
     });
 });
 
-
-
-
-
-router.get("/:id", (req, res) => {
-  User.findOne({
-    where: {
-      id: body.gem_id
-    }
-  })
-
+router.put("/edit/:id", (req, res) => {
+  res.send("edit-gem");
 });
+// router.put('/:id/edit', auth.requireLogin, (req, res,) => {
+//   User.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
+//     if(err) { console.error(err) };
+
+//      res.redirect(`/`+req.params.id);
+//   });
+// });
+
+
+
+// router.get("/:id", (req, res) => {
+//   User.findOne({
+//     where: {
+//       id: body.gem_id
+//     }
+//   })
+
+// });
 
 router.delete('/:id', (req, res) => {
   const id = req.params.id
+  User.destroy({
+    where: {
+      id: req.body.id
+    }
+
+  })
   //call the destroy sequelize method on a Gem
   //specify "where" the destroy method needs to act --> id of gem needs to match id from param
   //".then" res.json the prommise from the destroy method
