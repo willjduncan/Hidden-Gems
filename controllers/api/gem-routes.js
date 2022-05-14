@@ -28,10 +28,6 @@ router.post('/', (req, res) => {
     });
 });
 
-
-
-
-
 router.get("/:id", (req, res) => {
   User.findOne({
     where: {

@@ -31,11 +31,11 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
         <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
         <div class="form-group">
             <label for="gem-desc">*Description</label>
-            <textarea class="form-control" id="gem-desc" rows="10"></textarea>
+            <textarea class="form-control" id="gem-desc" name="gem-desc" rows="10"></textarea>
         </div>
         <div class="form-group mb-2">
             <label for="gem-country">*Country</label>
-            <select class="selectpicker countrypicker" id="gem-country" data-default="US" data-live-search="true"></select>
+            <select class="selectpicker countrypicker" id="gem-country" name="gem-country" data-default="US" data-live-search="true"></select>
         </div>
         <div class="form-group">
             <label for="gem-state">*State/Province</label>
@@ -60,7 +60,7 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
         </div>
          <div class="form-group">
             <label for="gem-activity">*Activity Type</label>
-            <select class="form-control" id="gem-activity">
+            <select class="form-control" name="gem-activity" id="gem-activity">
                 <option>Outdoors</option>
                 <option>Museum</option>
                 <option>Restaurant</option>
@@ -77,7 +77,7 @@ Edit Profile <img src="/images/icon.png" class="icon-btn" width="17" height="17"
       <div class="modal-footer">
           <p class="mr-4">Please fill out all required (*) fields</p>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit Gem</button>
+        <button id="add-new-gem-btn" type="button" class="btn btn-primary">Submit Gem</button>
       </div>
     </div>
   </div>
