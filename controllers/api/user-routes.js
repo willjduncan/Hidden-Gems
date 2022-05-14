@@ -1,13 +1,7 @@
 const router = require('express').Router();
 const { User, Gem, Vote, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-const withAuth = (req, res, next) => {
-  if (!req.session.user_id) {
-    res.redirect('/login');
-  } else {
-    next();
-  }
-};
 //POST /api/user/
 router.post('/user', (req, res) => {
   User.create({
@@ -73,5 +67,4 @@ router.post('/logout', (req, res) => {
     res.status(400).end();
   }
 });
-module.exports = withAuth;
 module.exports = router;
