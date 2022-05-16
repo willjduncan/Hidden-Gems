@@ -1,4 +1,3 @@
-//(PLACEHOLDER) function to gather form data and call our "POST /api/user/login" express route
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -16,7 +15,7 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard/");
+      document.location.replace("/dashboard");
     }
     else {
       alert(response.statusText);
@@ -43,7 +42,7 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard/");
+      document.location.replace("/dashboard");
     }
     else {
       alert(response.statusText);

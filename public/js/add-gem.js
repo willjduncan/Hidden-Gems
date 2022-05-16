@@ -11,6 +11,7 @@ async function newFormHandler(event) {
   const city = document.querySelector("input[name='gem-city']").value;
   const lon = document.querySelector("input[name='gem-lon']").value;
   const lat = document.querySelector("input[name='gem-lat']").value;
+  console.log("before")
 
   const response = await fetch("/api/gem", {
     method: "POST",
@@ -32,6 +33,7 @@ async function newFormHandler(event) {
   if (response.ok) {
     document.location.replace("/dashboard/");
   }
+  console.log("uh-oh")
 };
 
-document.querySelector(".btn btn-primary").addEventListener("submit", newFormHandler);
+document.querySelector(".body").addEventListener('submit', newFormHandler);
