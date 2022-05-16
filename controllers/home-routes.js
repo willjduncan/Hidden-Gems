@@ -13,17 +13,20 @@ router.get('/', async (req, res) => {
             'title',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'), 'vote_count'],
           ],
-          // include: [
-          //   {
-          //     model: Comment,
-          //     attributes: ['id', 'comment_text', 'gem_id', 'user_id',
-          //     [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE comment.gem_id) = gem.id'), 'comment_count'] ],
-          //     include: {
-          //       model: User,
-          //       attributes: ['username']
-          //     }
-          //   },
-          // ]
+          include: [
+            {
+              model: Comment,
+              attributes: ['id', 'comment_text', 'gem_id', 'user_id', 'created_at'],
+              include: {
+                model: User,
+                attributes: ['username']
+              }
+            },
+            {
+              model: User,
+              attributes: ['username']
+            }
+          ]
      });
 
     const gems = dbGemData.map((gem) =>
