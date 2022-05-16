@@ -22,10 +22,10 @@
     "mysql2": "^2.0.1",
     "sequelize": "^5.22.5"
   },
-  "os": [
-    "darwin",
-    "win32"
-  ],
+  // "os": [
+  //   "darwin",
+  //   "win32"
+  // ],
   "devDependencies": {
   }
 }
