@@ -56,9 +56,9 @@ Gem.init(
     state: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          len: [3]
-      }
+      //   validate: {
+      //     len: [3]
+      // }
     },
     visitors: {
       type: DataTypes.STRING,
@@ -67,9 +67,9 @@ Gem.init(
     pic: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isUrl: true,
-      }
+      //   validate: {
+      //     isUrl: true,
+      // }
     },
     activity_type: {
       type: DataTypes.STRING(50),

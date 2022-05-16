@@ -22,7 +22,7 @@
       <ul class="nav">
         {{#if loggedIn}}
           <li class="nav-item">
-            <a class="ts-1" href="/dashboard">Dashboard</a>
+            <a id="dashboard-link" class="ts-1" href="/dashboard">Dashboard</a>
           </li>
           <li class="nav-item">
             <button id="logout" class="btn-no-style ts-1">Logout</button>
@@ -35,7 +35,7 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="body">
     {{{body}}}
   </main>
       <footer class="mb-3 bg-pri">
