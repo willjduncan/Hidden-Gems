@@ -36,4 +36,4 @@ async function newFormHandler(event) {
   console.log("uh-oh")
 };
 
-document.querySelector(".body").addEventListener('submit', newFormHandler);
+document.querySelector(".add-gem-form").addEventListener('submit', newFormHandler);

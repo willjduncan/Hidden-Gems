@@ -1,5 +1,6 @@
 async function deleteFormHandler(event) {
     event.preventDefault();
+    console.log("delete begin")
 
     const id = window.location.toString().split("/") [
         window.location.toString().split("/").length - 1
@@ -16,4 +17,4 @@ async function deleteFormHandler(event) {
     }
 };
 
-document.querySelector(".btn btn-danger").addEventListener("click", deleteFormHandler);
+document.querySelector(".delete-gem-btn").addEventListener('click', deleteFormHandler);

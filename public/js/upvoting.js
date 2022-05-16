@@ -5,6 +5,8 @@ async function upvoteClickHandler(event) {
         window.location.toString().split("/").length - 1
     ];
 
+    console.log(id);
+
     const response = await fetch("/api/gem/upvote", {
         method: "PUT",
         body: JSON.stringify({
@@ -21,4 +23,4 @@ async function upvoteClickHandler(event) {
     }
 };
 
-document.querySelector(".upvote-btn").addEventListener("submit", upvoteClickHandler);
+document.querySelector(".upvote-btn").addEventListener("click", upvoteClickHandler);

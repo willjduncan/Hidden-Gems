@@ -40,4 +40,4 @@ async function editFormHandler(event) {
     }
 };
 
-document.querySelector(".btn btn-primary").addEventListener("submit", editFormHandler);
+document.querySelector(".edit-gem-form").addEventListener("submit", editFormHandler);
