@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Gem, User, Vote } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//GET ALL GEMS
 router.get("/", (req, res) => {
   Gem.findAll()
     .then(dbUserDATA => res.json(dbUserDATA))
@@ -11,6 +12,7 @@ router.get("/", (req, res) => {
     });
 });
 
+// POST api/gem/
 router.post('/', (req, res) => {
   Gem.create({
     title: req.body.title,
@@ -20,7 +22,7 @@ router.post('/', (req, res) => {
     visitors: req.body.visitors,
     pic: req.body.pic,
     activity_type: req.body.activity_type,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -38,16 +40,26 @@ router.get("/:id", (req, res) => {
 
 });
 
-router.delete('/:id', (req, res) => {
-  const id = req.params.id
-  //call the destroy sequelize method on a Gem
-  //specify "where" the destroy method needs to act --> id of gem needs to match id from param
-  //".then" res.json the prommise from the destroy method
+router.delete('/:id', withAuth, (req, res) => {
+  Gem.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbGemData => {
+      if (!dbGemData) {
+        res.status(404).json({ message: 'No Gem found with this id' });
+        return;
+      }
+      res.json(dbGemData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-})
-
-
-// PUT /api/posts/upvote
+// PUT /api/gem/upvote
 router.put('/upvote', withAuth, (req, res) => {
   // make sure the session exists first
   if (req.session) {

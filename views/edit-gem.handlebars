@@ -12,8 +12,8 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>
-            <div class="modal-body pl-5 pr-5">
-                <form>
+            <form class="edit-gem-form">
+                <div class="modal-body pl-5 pr-5">
 
                     <div class="form-group">
                         <label for="edit-gem-title">*Title</label>
@@ -22,7 +22,7 @@
                     <p class="font-italic">Please include if applicable: highlights, hours, prices, tours </p>
                     <div class="form-group">
                         <label for="edit-gem-desc">*Description</label>
-                        <textarea class="form-control" name="edit-gem-desc" id="edit-gem-desc" rows="10" value="{{gem.description}}"></textarea>
+                        <textarea class="form-control" name="edit-gem-desc" id="edit-gem-desc" rows="10">{{gem.description}}</textarea>
                     </div>
                     <div class="form-group mb-2">
                         <label for="edit-gem-country">*Country</label>
@@ -65,14 +65,14 @@
                         <label for="edit-gem-photo">*Upload Photograph</label>
                         <input type="file" id="edit-gem-photo" name="edit-gem-photo" class="simple-file-upload form-control-file">
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <p class="mr-5">Please fill out all required (*) fields</p>
-                <a id="go-back-btn" class="btn btn-secondary" href="/dashboard">Go Back</a>
-                <button id="delete-gem-btn" type="button" class="btn btn-danger">Delete Gem</button>
-                <button id="confirm-edit-btn" type="button" class="btn btn-primary">Confirm Edit</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <p class="mr-5">Please fill out all required (*) fields</p>
+                    <a id="go-back-btn" class="btn btn-secondary" href="/dashboard">Go Back</a>
+                    <button type="button" class="delete-gem-btn btn btn-danger">Delete Gem</button>
+                    <button id="confirm-edit-btn" type="submit" class="btn btn-primary">Confirm Edit</button>
+                </div>
+            </form>
         </div>
     </div>
     <div>'</div>
