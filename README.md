@@ -86,10 +86,6 @@ Work was split in the following ways:
 
 Will: Handlebars, CSS, utils, models, README.
 
-Ryanne: All Controllers, Presentation
-
-David: Wireframe, Seeds, front-end JS
-
 We aimed to each work on our separate parts and meld them together later in the development stage, using hardcoding for handlebars and Insomnia for the controllers to make sure everything worked before pushing it. 
 
 
@@ -136,6 +132,14 @@ Luiz (TA)
 Luke (TA)
 Sandra (TA)
 
+For the creation of the MVP, Ryanne Bennett played a role in creating some of the User Routes and Gem Routes, while David Shaw aided in the creation of the seed files and the front-end js. 
+
+Ryanne Bennett: ryannebennett1@outlook.com
+Github: [https://github.com/rbenne30](https://github.com/rbenne30)
+
+David Shaw: hawkhilt@gmail.com
+Github: [https://github.com/Obtains](https://github.com/Obtains)
+
 
 
 
@@ -181,11 +185,7 @@ For any additional questions, we can be reached at the following
 Will Duncan: willdunc12@gmail.com
 Github: [https://github.com/willjduncan](https://github.com/willjduncan)
 
-Ryanne Bennett: ryannebennett1@outlook.com
-Github: [https://github.com/rbenne30](https://github.com/rbenne30)
 
-David Shaw: hawkhilt@gmail.com
-Github: [https://github.com/Obtains](https://github.com/Obtains)
 
 
 

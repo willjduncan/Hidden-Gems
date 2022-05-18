@@ -58,7 +58,7 @@ const gemData = [
     user_id: 2
   },
   {
-    title: "Apsara Dancing.",
+    title: "Apsara Dancing",
     description: "Cambodia Living Arts at the National Museum of Cambodia, Phnom Penh, features three different performances. Shadow & Light, presented by Morodok Koma Bassac, depicts scenes from the Reamker (the Cambodian version of India’s Ramayana epic). These episodes are presented through different forms including Sbaek Thom, large shadow puppets, Monkey Dance, a high energy performance featuring intricate paper mâché masks, and the Tale of the Golden Mermaid. Shadow & Light also showcases rhythmic folk dances evocative of Cambodian rural life. (Monday, Tuesday, Wednesday). Grace & Grandeur, presented by Yu Vek Selapak features a unique performance which combines the elegance of Apsara (celestial female spirits) with the harmony of Pin harps. Apsara dance is expresses the ideal of grace, an essential part of Cambodian culture finding its roots in both Hindu and Buddhist mythologies. This performance also includes Lakhon Khol, a Cambodian masked dance theater performed only by men, and a selection of folk dances which present an insight into the life of fishermen and farmers in rural Cambodia. (Thursday, Saturday). Heaven & Earth is presented by Yu Vek Selapak and features The Churning of the Ocean, a stunning piece which narrates the creation of the universe and the birth of Apsara. This spectacular dance is inspired by the famous epic depicted on the bas-reliefs of Angkor Wat, the battle between devas (gods) and asuras (demons) Heaven & Earth also presents lively folk dances originating from several Cambodian provinces. (Friday, Sunday)",
     country: "Cambodia",
     state: "Phnom Penh",
