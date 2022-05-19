@@ -7,12 +7,13 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const dbGemData = await Gem.findAll({
-          attributes: [
-            'id',
-            'pic',
-            'title',
-            [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'), 'vote_count'],
-          ],
+      order: [[sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'), 'DESC']],
+      attributes: [
+        'id',
+        'pic',
+        'title',
+        [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'), 'vote_count'],
+      ],
           include: [
             {
               model: Comment,

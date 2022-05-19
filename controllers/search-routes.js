@@ -4,7 +4,7 @@ const sequelize = require('../config/config');
 
 
 
-// GET gems b activity type
+// GET gems by activity type
 router.get('/activity', async (req, res) => {
     try {
       const dbGemData = await Gem.findAll({
@@ -37,7 +37,7 @@ router.get('/activity', async (req, res) => {
         gem.get({ plain: true })
       );
   
-      res.render('home', {
+      res.render('search', {
         gems,
         loggedIn: req.session.loggedIn,
       });
@@ -80,7 +80,7 @@ router.get('/state', async (req, res) => {
         gem.get({ plain: true })
       );
   
-      res.render('home', {
+      res.render('search', {
         gems,
         loggedIn: req.session.loggedIn,
       });
@@ -125,7 +125,7 @@ router.get('/state', async (req, res) => {
         gem.get({ plain: true })
       );
   
-      res.render('home', {
+      res.render('search', {
         gems,
         loggedIn: req.session.loggedIn,
       });

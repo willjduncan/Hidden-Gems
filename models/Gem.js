@@ -15,7 +15,6 @@ class Gem extends Model {
         attributes: [
           'id',
           'title',
-          'created_at',
           [
             sequelize.literal('(SELECT COUNT(*) FROM vote WHERE gem.id = vote.gem_id)'),
             'vote_count'

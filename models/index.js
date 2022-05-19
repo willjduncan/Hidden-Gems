@@ -3,7 +3,6 @@ const Gem = require("./Gem");
 const Vote = require('./Vote');
 const Favorite = require('./Favorite');
 const Comment = require('./Comment');
-const sequelize = require('../config/config');
 
 
 //USER - GEM ASSOCIATIONS

@@ -101,6 +101,12 @@ header h1 a {
     border-bottom: 2px solid var(--tertiary);
 
 }
+.login {
+    color: var(--tertiary);
+}
+.login:hover {
+    color: var(--secondary);
+}
 
 /* CARDS */
 .card:hover {
