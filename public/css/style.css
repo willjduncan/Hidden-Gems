@@ -26,12 +26,13 @@ body, html {
 
 /* HEADER AND NAV */
 #main-header {
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    background: linear-gradient(28deg, rgba(16,69,71,1) 0%, rgba(119,159,161,1) 40%);
 }
 
 nav ul li a, nav ul li button {
@@ -101,11 +102,30 @@ header h1 a {
     border-bottom: 2px solid var(--tertiary);
 
 }
+.gem-list {
+    width: 93%;
+    margin: 0 auto;
+}
 .login {
     color: var(--tertiary);
 }
 .login:hover {
     color: var(--secondary);
+}
+
+/* SEARCH */
+#search-name {
+    z-index: 1000;
+}
+.search-box {
+    width: 80%;
+    margin: 20px auto;
+    /* background-color: var(--fifth); */
+    background: rgb(16,69,71);
+    background: linear-gradient(28deg, rgba(16,69,71,1) 0%, rgba(119,159,161,1) 40%, rgba(16,69,71,1) 100%);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px var(--fourth);
 }
 
 /* CARDS */
@@ -259,7 +279,7 @@ header h1 a {
 
 
 /* BUTTONS */
-a, #a-dash{
+a, #a-dash, #logout{
     color: var(--tertiary);
     -webkit-transition: color .6s;
     -moz-transition:    color .6s;
@@ -363,7 +383,9 @@ button:hover {
 
 /* FOOTER */
 footer {
-    border-top: 1px solid #ccc;  
+    border-top: 1px solid #ccc;
+    background: linear-gradient(28deg, rgba(16,69,71,1) 0%, rgba(119,159,161,1) 40%, rgba(16,69,71,1) 100%);
+  
 }
 .foot-text {
     color: var(--tertiary); 

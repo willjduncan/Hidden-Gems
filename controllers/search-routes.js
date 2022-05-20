@@ -5,11 +5,11 @@ const sequelize = require('../config/config');
 
 
 // GET gems by activity type
-router.get('/activity', async (req, res) => {
+router.get('/activity/:type', async (req, res) => {
     try {
       const dbGemData = await Gem.findAll({
         where: {
-            activity_type: req.body.activity_type
+            activity_type: req.params.type
           },
             attributes: [
               'id',
@@ -48,11 +48,11 @@ router.get('/activity', async (req, res) => {
   });
 
 // GET gems by state
-router.get('/state', async (req, res) => {
+router.get('/state/:type', async (req, res) => {
     try {
       const dbGemData = await Gem.findAll({
         where: {
-            state: req.body.state
+            state: req.params.type
           },
             attributes: [
               'id',
@@ -93,11 +93,11 @@ router.get('/state', async (req, res) => {
 
 
 // GET gems by country
-router.get('/state', async (req, res) => {
+router.get('/country/:type', async (req, res) => {
     try {
       const dbGemData = await Gem.findAll({
         where: {
-            country: req.body.country
+            country: req.params.type
           },
             attributes: [
               'id',

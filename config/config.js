@@ -11,12 +11,6 @@ const sequelize = process.env.JAWSDB_URL
       port: 3306
 });
 
-// const connection = Sequelize.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: ''
-// });
-
 module.exports = sequelize;
 
 
