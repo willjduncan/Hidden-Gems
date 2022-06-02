@@ -36,11 +36,14 @@ router.get('/activity/:type', async (req, res) => {
       const gems = dbGemData.map((gem) =>
         gem.get({ plain: true })
       );
-  
-      res.render('search', {
-        gems,
-        loggedIn: req.session.loggedIn,
-      });
+       if (dbGemData) {
+           res.render('search', {
+             gems,
+             loggedIn: req.session.loggedIn,
+           });
+       } else {
+        res.render('fail-search')
+       }
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

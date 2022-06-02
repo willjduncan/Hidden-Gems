@@ -43,4 +43,38 @@ router.get('/', withAuth, (req, res) => {
     });
   });
 
+
+//Edit-Profile Page ----- PUT /dashboard/edit/user/
+router.get("/edit/user/", (req, res) => {
+  User.findOne({
+      where: {
+        id: req.session.user_id 
+      },
+      attributes: [
+        'id',
+        'username',
+        'email',
+      ]
+  })
+  .then(dbUserData => {
+      if (!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id' });
+          return;
+      }
+
+      // serialize the data
+      const User = dbUserData.get({ plain: true });
+
+      // pass data to template
+      res.render('edit-profile', {
+          User,
+          loggedIn: true
+      });
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
+
   module.exports = router;

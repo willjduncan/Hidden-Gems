@@ -161,37 +161,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 
 
-//Edit-Profile Page
-router.get("/edit/user/:id", (req, res) => {
-    User.findOne({
-        where: {
-          id: req.session.user_id 
-        },
-        attributes: [
-          'id',
-          'email',
-        ]
-    })
-    .then(dbgemData => {
-        if (!dbgemData) {
-            res.status(404).json({ message: 'No user found with this id' });
-            return;
-        }
-  
-        // serialize the data
-        const gem = dbgemData.get({ plain: true });
-  
-        // pass data to template
-        res.render('edit-profile', {
-            gem,
-            loggedIn: true
-        });
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
+
 
 
 // Redirection away from Login for those Logged In

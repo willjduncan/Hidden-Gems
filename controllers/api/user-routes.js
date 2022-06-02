@@ -120,12 +120,12 @@ router.post('/', (req, res) => {
 
 
 
-// PUT /api/users/1
-router.put('/:id', withAuth, (req, res) => {
+// PUT /api/user/
+router.put('/', withAuth, (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
-      id: req.params.id
+      id: req.session.user_id
     }
   })
     .then(dbUserData => {

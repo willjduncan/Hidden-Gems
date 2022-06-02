@@ -152,12 +152,20 @@ If you make changes, test it locally on a branch before pushing to main. Clone f
 
 First, refactoring is always welcome. When filling out forms, adding further catches to make sure the information we get is accurate and up to form would improve user experience and the database. Examples include having a dropdown for states if the gem location is in the USA, adding an ability to add other activities besides simply labeling "other," turning missing required fields red if the user submits an unfinished gem, making sure downloaded pictures have suitable dimensions, adding alt text for the uploaded photos, and adding an "are you sure?" modal when the delete gem button is clicked. 
 Some of the bigger improvements to be made include the following:
-    -adding maps to each gem so the user can see its location better (MapBox is probably the best option)
+    -adding maps to gems that may not have lat and long?
     -adding the ability to favorite a gem, and then, if you go to the home page, populating the body with favorite gems instead of top-voted gems. 
     -adding a search bar and the ability to search for gems based on state, country, and activity
     -adding an entire sister site titled "Local Gems," where the focus is more city-based rather than tourism-based (looking for hole-in-the-wall restaurants, unknown activities and shops, etc.)
     -adding profile pictures
     -adding ability to submit more than one photo per gem, and coming up with a good way to cycle through them
+
+
+## Issues
+Among the issues to improve are:
+Double check editing Users works
+Double check editing Gems online works
+Figure out what's up with the Single-Gem header, which gets messed up if there's a map perhaps?
+fix spacing on smaller login screen
 
 
 
@@ -216,10 +224,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-  <!-- // "os": [
-  //   "darwin",
-  //   "win32"
-  // ],
-  // "devDependencies": {
-  // } -->

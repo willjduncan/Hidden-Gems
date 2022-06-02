@@ -1,6 +1,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet"/>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.0/mapbox-gl.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+ <script data-main="scripts/app" src="scripts/require.js"></script>
 
 <article class="post post-box">
     <div class="view gem-bg-img">
@@ -25,17 +26,22 @@
             <p>{{gem.state}}, {{gem.country}}</p>
             {{/if}}
           {{#if gem.lon}}
-            <p>Latitude: {{gem.lat}}</p>
-            <p>Longitude: {{gem.lon}} </p>
+            <p>Latitude: <span id="lati">{{gem.lat}}</span></p>
+            <p>Longitude: <span id="long">{{gem.lon}}</span> </p>
             {{/if}}
           
       </div>
-    <div>
-        <h4 id="desc-title" class="mt-3">Desription:</h4>
-        <p class="desc-text mb-4">{{gem.description}}</p> 
-    </div>
-  </div>
 
+        <div>
+            <h4 id="desc-title" class="mt-3">Desription:</h4>
+            <p class="desc-text mb-4">{{gem.description}}</p> 
+        
+        </div>
+{{#if gem.lon}}
+        <div id = 'mapbox'>
+            <div id='map'></div>
+        </div>
+{{/if}}
 
     {{#if loggedIn}}
     <form class="comment-form mt-5">
@@ -58,6 +64,11 @@
     {{/if}}
 
     {{> comments gem.comments}}
+
+{{#if gem.lon}}
+    <script src="/js/maps.js"></script>
+{{/if}}
+
 
     {{#if loggedIn}}
     <script src="/js/comment.js"></script>

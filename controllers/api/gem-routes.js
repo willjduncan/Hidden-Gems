@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Gem, User, Vote, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//GET ALL GEMS
+//GET ALL GEMS   ------ GET /api/gem/
 router.get("/", (req, res) => {
   Gem.findAll()
     .then(dbUserDATA => res.json(dbUserDATA))
@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
     });
 });
 
-// POST api/gem/
+// ADD GEM ------ POST /api/gem/
 router.post('/', (req, res) => {
   Gem.create({
     title: req.body.title,
@@ -31,6 +31,30 @@ router.post('/', (req, res) => {
     });
 });
 
+// EDIT GEM BY ID ------ PUT /api/gem/1
+router.put('/:id', withAuth, (req, res) => {
+  Gem.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbGemData => {
+      if (!dbGemData[0]) {
+        res.status(404).json({ message: 'No Gem found with this id' });
+        return;
+      }
+      res.json(dbGemData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
+
+//GET GEM BY ID ---- GET /api/gem/:id
 router.get("/:id", (req, res) => {
   User.findOne({
     where: {
@@ -40,6 +64,7 @@ router.get("/:id", (req, res) => {
 
 });
 
+//DELETE GEM BY ID ---- DELETE /api/gem/:id
 router.delete('/:id', withAuth, (req, res) => {
   Gem.destroy({
     where: {
@@ -59,7 +84,7 @@ router.delete('/:id', withAuth, (req, res) => {
     });
 });
 
-// PUT /api/gem/upvote
+// ADD UPVOTE  -------- PUT /api/gem/upvote
 router.put('/upvote', withAuth, (req, res) => {
   // make sure the session exists first
   if (req.session) {

@@ -24,6 +24,14 @@ body, html {
     color: var(--tertiary);
 }
 
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 7rem; 
+}
+
 /* HEADER AND NAV */
 #main-header {
     /* background-color: var(--primary); */
@@ -226,7 +234,8 @@ header h1 a {
     }
 }
 #mask-arrange{
-    top: 40%;
+    top: 18%;
+    height: auto;
 }
 .post-header {
     font-size: smaller;
@@ -234,6 +243,16 @@ header h1 a {
 }
 .side-border {
     border-left: 3px solid var(--tertiary);
+}
+
+/* MAPS */
+#map {
+    width: 70%; 
+    height: 400px;
+    margin: 2rem auto 2rem auto;
+}
+#mapbox {
+
 }
 
 
@@ -385,7 +404,10 @@ button:hover {
 footer {
     border-top: 1px solid #ccc;
     background: linear-gradient(28deg, rgba(16,69,71,1) 0%, rgba(119,159,161,1) 40%, rgba(16,69,71,1) 100%);
-  
+    position: absolute;
+    bottom: 0;
+    height: 7rem;
+    width: 100%;
 }
 .foot-text {
     color: var(--tertiary); 
